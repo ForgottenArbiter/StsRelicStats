@@ -1,4 +1,4 @@
-# StsRelicStats
+# Relic Stats
 A mod to track and display relic stats in Slay the Spire
 
 # To integrate stats into your mod
