@@ -12,7 +12,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -27,7 +29,7 @@ import java.util.HashMap;
 import java.util.Properties;
 
 @SpireInitializer
-public class RelicStats implements PostInitializeSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, OnStartBattleSubscriber, CustomSavableRaw {
+public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, OnStartBattleSubscriber, CustomSavableRaw {
 
     private static final Logger logger = LogManager.getLogger(RelicStats.class.getName());
     private static HashMap<String, HasCustomStats> statsInfoHashMap = new HashMap<>();
@@ -218,5 +220,20 @@ public class RelicStats implements PostInitializeSubscriber, PostDungeonInitiali
             turnCount = 0;
         }
 
+    }
+
+    public void receivePostUpdate() {
+        SlayTheRelicsIntegration.clear();
+        if (CardCrawlGame.isInARun()) {
+            for (AbstractRelic relic : AbstractDungeon.player.relics) {
+                if (statsInfoHashMap.containsKey(relic.relicId)) {
+                    Hitbox hb = relic.hb;
+                    PowerTip tip = new PowerTip(statsHeader, getStatsDescription(relic.relicId));
+                    ArrayList<PowerTip> tips = (ArrayList<PowerTip>)relic.tips.clone();
+                    tips.add(tip);
+                    SlayTheRelicsIntegration.renderTipHitbox(hb, tips);
+                }
+            }
+        }
     }
 }
