@@ -1,0 +1,349 @@
+{
+  "STATS:HEADER": {
+    "TEXT": [
+      "Stats"
+    ]
+  },
+  "STATS:EXTENDED": {
+    "TEXT": [
+      " NL Per turn: ",
+      " NL Per combat: "
+    ]
+  },
+  "STATS:OPTION": {
+    "TEXT": [
+      "Enable per combat and per turn stat reporting for combat relics"
+    ]
+  },
+  "STATS:Snecko Eye": {
+    "TEXT": [
+      "Card cost counts: NL 0 energy: ",
+      " NL 1 energy: ",
+      " NL 2 energy: ",
+      " NL 3 energy: "
+    ]
+  },
+  "STATS:CeramicFish": {
+    "TEXT": [
+      "Gold earned: "
+    ]
+  },
+  "STATS:MawBank": {
+    "TEXT": [
+      "Gold earned: "
+    ]
+  },
+  "STATS:Toy Ornithopter": {
+    "TEXT": [
+      "HP healed: "
+    ]
+  },
+  "STATS:Burning Blood": {
+    "TEXT": [
+      "HP healed: "
+    ]
+  },
+  "STATS:MealTicket": {
+    "TEXT": [
+      "HP healed: "
+    ]
+  },
+  "STATS:SsserpentHead": {
+    "TEXT": [
+      "Gold earned: "
+    ]
+  },
+  "STATS:Golden Idol": {
+    "TEXT": [
+      "Extra gold dropped: "
+    ]
+  },
+  "STATS:Bloody Idol": {
+    "TEXT": [
+      "HP healed: "
+    ]
+  },
+  "STATS:FaceOfCleric": {
+    "TEXT": [
+      "Max HP gained: "
+    ]
+  },
+  "STATS:Black Star": {
+    "TEXT": [
+      "Extra relics: "
+    ]
+  },
+  "STATS:Blood Vial": {
+    "TEXT": [
+      "HP healed: "
+    ]
+  },
+  "STATS:Juzu Bracelet": {
+    "TEXT": [
+      "Combats avoided: "
+    ]
+  },
+  "STATS:Ectoplasm": {
+    "TEXT": [
+      "Gold lost: "
+    ]
+  },
+  "STATS:Sozu": {
+    "TEXT": [
+      "Potions lost: "
+    ]
+  },
+  "STATS:Boot": {
+    "TEXT": [
+      "Damage added: "
+    ]
+  },
+  "STATS:PreservedInsect": {
+    "TEXT": [
+      "HP removed: "
+    ]
+  },
+  "STATS:Meat on the Bone": {
+    "TEXT": [
+      "HP healed: "
+    ]
+  },
+  "STATS:Pantograph": {
+    "TEXT": [
+      "HP healed: "
+    ]
+  },
+  "STATS:Torii": {
+    "TEXT": [
+      "Damage prevented: "
+    ]
+  },
+  "STATS:TungstenRod": {
+    "TEXT": [
+      "Damage prevented: "
+    ]
+  },
+  "STATS:Mercury Hourglass": {
+    "TEXT": [
+      "Damage dealt: "
+    ]
+  },
+  "STATS:StoneCalendar": {
+    "TEXT": [
+      "Damage dealt: "
+    ]
+  },
+  "STATS:Darkstone Periapt": {
+    "TEXT": [
+      "Max HP gained: "
+    ]
+  },
+  "STATS:Singing Bowl": {
+    "TEXT": [
+      "Max HP gained: "
+    ]
+  },
+  "STATS:Shuriken": {
+    "TEXT": [
+      "Strength gained: "
+    ]
+  },
+  "STATS:Kunai": {
+    "TEXT": [
+      "Dexterity gained: "
+    ]
+  },
+  "STATS:Ornamental Fan": {
+    "TEXT": [
+      "Block gained: "
+    ]
+  },
+  "STATS:Mark of the Bloom": {
+    "TEXT": [
+      "Healing prevented: "
+    ]
+  },
+  "STATS:Art of War": {
+    "TEXT": [
+      "Energy gained: "
+    ]
+  },
+  "STATS:Nunchaku": {
+    "TEXT": [
+      "Energy gained: "
+    ]
+  },
+  "STATS:Snake Skull": {
+    "TEXT": [
+      "Poison applied: "
+    ]
+  },
+  "STATS:Letter Opener": {
+    "TEXT": [
+      "Damage dealt: "
+    ]
+  },
+  "STATS:Sundial": {
+    "TEXT": [
+      "Energy gained: "
+    ]
+  },
+  "STATS:Charon's Ashes": {
+    "TEXT": [
+      "Damage dealt: "
+    ]
+  },
+  "STATS:CloakClasp": {
+    "TEXT": [
+      "Block gained: "
+    ]
+  },
+  "STATS:Pocketwatch": {
+    "TEXT": [
+      "Cards drawn: "
+    ]
+  },
+  "STATS:Tingsha": {
+    "TEXT": [
+      "Damage dealt: "
+    ]
+  },
+  "STATS:Tough Bandages": {
+    "TEXT": [
+      "Block gained: "
+    ]
+  },
+  "STATS:VioletLotus": {
+    "TEXT": [
+      "Energy gained: "
+    ]
+  },
+  "STATS:TheAbacus": {
+    "TEXT": [
+      "Block gained: "
+    ]
+  },
+  "STATS:Dead Branch": {
+    "TEXT": [
+      "Cards generated: "
+    ]
+  },
+  "STATS:Unceasing Top": {
+    "TEXT": [
+      "Cards drawn: "
+    ]
+  },
+  "STATS:FrozenCore": {
+    "TEXT": [
+      "Frost orbs channeled: "
+    ]
+  },
+  "STATS:HoveringKite": {
+    "TEXT": [
+      "Energy gained: "
+    ]
+  },
+  "STATS:Runic Cube": {
+    "TEXT": [
+      "Cards drawn: "
+    ]
+  },
+  "STATS:Strange Spoon": {
+    "TEXT": [
+      "Cards recycled: "
+    ]
+  },
+  "STATS:Nloth's Gift": {
+    "TEXT": [
+      "Extra rare cards: "
+    ]
+  },
+  "STATS:Self Forming Clay": {
+    "TEXT": [
+      "Block gained: "
+    ]
+  },
+  "STATS:Necronomicon": {
+    "TEXT": [
+      "Attacks played twice: "
+    ]
+  },
+  "STATS:Medical Kit": {
+    "TEXT": [
+      "Status cards exhausted: "
+    ]
+  },
+  "STATS:Blue Candle": {
+    "TEXT": [
+      "Curses exhausted: "
+    ]
+  },
+  "STATS:Orichalcum": {
+    "TEXT": [
+      "Block gained: "
+    ]
+  },
+  "STATS:Pen Nib": {
+    "TEXT": [
+      "Attacks doubled: "
+    ]
+  },
+  "STATS:Smiling Mask": {
+    "TEXT": [
+      "Gold saved: "
+    ]
+  },
+  "STATS:Gremlin Horn": {
+    "TEXT": [
+      "Cards drawn: ",
+      " NL Energy gained: ",
+      " NL Cards per battle: ",
+      " NL Energy per battle: "
+    ]
+  },
+  "STATS:InkBottle": {
+    "TEXT": [
+      "Cards drawn: "
+    ]
+  },
+  "STATS:Bird Faced Urn": {
+    "TEXT": [
+      "HP healed: "
+    ]
+  },
+  "STATS:Champion Belt": {
+    "TEXT": [
+      "Weak applied: "
+    ]
+  },
+  "STATS:Ginger": {
+    "TEXT": [
+      "Weak prevented: "
+    ]
+  },
+  "STATS:Turnip": {
+    "TEXT": [
+      "Frail prevented: "
+    ]
+  },
+  "STATS:Prayer Wheel": {
+    "TEXT": [
+      "Extra card rewards: "
+    ]
+  },
+  "STATS:Inserter": {
+    "TEXT": [
+      "Orb slots created: "
+    ]
+  },
+  "STATS:HandDrill": {
+    "TEXT": [
+      "Vulnerable applied: "
+    ]
+  },
+  "STATS:OrangePellets": {
+    "TEXT": [
+      "Debuffs cleared: "
+    ]
+  }
+}
