@@ -1,2 +1,6 @@
 # Project exclude paths
 /target/
+dependency-reduced-pom.xml
+
+# IDEA
+*.iml

@@ -58,6 +58,8 @@ public class RelicStats implements PostInitializeSubscriber, PostDungeonInitiali
 
     public static void registerCustomStats(String relicId, HasCustomStats customStats) {
         statsInfoHashMap.put(relicId, customStats);
+        String saveKey = String.format("stats_%s", relicId);
+        BaseMod.addSaveField(saveKey, statsInfoHashMap.get(relicId));
     }
 
     public void receivePostInitialize() {
@@ -131,11 +133,6 @@ public class RelicStats implements PostInitializeSubscriber, PostDungeonInitiali
 
         System.out.println("Custom stat relics: ");
         System.out.println(Arrays.toString(statsInfoHashMap.keySet().toArray()));
-
-        for(String relicId: statsInfoHashMap.keySet()) {
-            String saveKey = String.format("stats_%s", relicId);
-            BaseMod.addSaveField(saveKey, statsInfoHashMap.get(relicId));
-        }
 
         BaseMod.addSaveField("stats_master_turn_counts", this);
 
