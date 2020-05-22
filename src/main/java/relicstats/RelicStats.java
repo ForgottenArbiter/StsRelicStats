@@ -66,6 +66,10 @@ public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscribe
         BaseMod.addSaveField(saveKey, statsInfoHashMap.get(relicId));
     }
 
+    public static void unregisterCustomStats(String relicId) {
+        statsInfoHashMap.remove(relicId);
+    }
+
     public void receivePostInitialize() {
         statsHeader = CardCrawlGame.languagePack.getUIString("STATS:HEADER").TEXT[0];
         registerCustomStats(SneckoEye.ID, new SneckoInfo());
