@@ -38,6 +38,7 @@ public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscribe
     public static int battleCount;
 
     private static String EXTENDED_STATS_OPTION = "extendedStats";
+    private static String TWITCH_OPTION = "slayTheRelics";
     private static SpireConfig statsConfig;
 
     public RelicStats(){
@@ -46,6 +47,7 @@ public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscribe
         try {
             Properties defaults = new Properties();
             defaults.put(EXTENDED_STATS_OPTION, Boolean.toString(true));
+            defaults.put(TWITCH_OPTION, Boolean.toString(false));
             statsConfig = new SpireConfig("Relic Stats", "config", defaults);
             statsConfig.save();
         } catch (IOException e) {
@@ -132,6 +134,10 @@ public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscribe
         registerCustomStats(Inserter.ID, InserterInfo.getInstance());
         registerCustomStats(HandDrill.ID, HandDrillInfo.getInstance());
         registerCustomStats(OrangePellets.ID, OrangePelletsInfo.getInstance());
+        registerCustomStats(EternalFeather.ID, new EternalFeatherInfo());
+        registerCustomStats(WarpedTongs.ID, WarpedTongsInfo.getInstance());
+        registerCustomStats(Shovel.ID, new ShovelInfo());
+        registerCustomStats(CentennialPuzzle.ID, CentennialPuzzleInfo.getInstance());
 
         System.out.println("Custom stat relics: ");
         System.out.println(Arrays.toString(statsInfoHashMap.keySet().toArray()));
@@ -148,11 +154,18 @@ public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscribe
         return statsConfig.getBool(EXTENDED_STATS_OPTION);
     }
 
+    public static boolean getTwitchIntegrationOption() {
+        if (statsConfig == null) {
+            return false;
+        }
+        return statsConfig.getBool(TWITCH_OPTION);
+    }
+
     private void setUpOptions() {
         ModPanel settingsPanel = new ModPanel();
         ModLabeledToggleButton extendedStatsButton = new ModLabeledToggleButton(
                 CardCrawlGame.languagePack.getUIString("STATS:OPTION").TEXT[0],
-                350, 700, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                350, 725, Settings.CREAM_COLOR, FontHelper.charDescFont,
                 getExtendedStatsOption(), settingsPanel, modLabel -> {},
                 modToggleButton -> {
                     if (statsConfig != null) {
@@ -165,6 +178,21 @@ public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscribe
                     }
                 });
         settingsPanel.addUIElement(extendedStatsButton);
+        ModLabeledToggleButton slayTheRelicsButton = new ModLabeledToggleButton(
+                CardCrawlGame.languagePack.getUIString("STATS:OPTION").TEXT[1],
+                350, 665, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                getTwitchIntegrationOption(), settingsPanel, modLabel -> {},
+                modToggleButton -> {
+                    if (statsConfig != null) {
+                        statsConfig.setBool(TWITCH_OPTION, modToggleButton.enabled);
+                        try {
+                            statsConfig.save();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+        settingsPanel.addUIElement(slayTheRelicsButton);
         BaseMod.registerModBadge(ImageMaster.loadImage("Icon.png"),"Relic Stats", "Forgotten Arbiter", null, settingsPanel);
     }
 
@@ -224,7 +252,7 @@ public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscribe
 
     public void receivePostUpdate() {
         SlayTheRelicsIntegration.clear();
-        if (CardCrawlGame.isInARun()) {
+        if (CardCrawlGame.isInARun() && getTwitchIntegrationOption()) {
             for (AbstractRelic relic : AbstractDungeon.player.relics) {
                 if (statsInfoHashMap.containsKey(relic.relicId)) {
                     Hitbox hb = relic.hb;

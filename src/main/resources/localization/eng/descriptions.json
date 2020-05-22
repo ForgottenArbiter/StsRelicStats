@@ -12,7 +12,8 @@
   },
   "STATS:OPTION": {
     "TEXT": [
-      "Enable per combat and per turn stat reporting for combat relics"
+      "Enable per combat and per turn stat reporting for combat relics",
+      "Enable integration with the Slay the Relics mod"
     ]
   },
   "STATS:Snecko Eye": {
@@ -39,6 +40,11 @@
     ]
   },
   "STATS:Burning Blood": {
+    "TEXT": [
+      "HP healed: "
+    ]
+  },
+  "STATS:Eternal Feather": {
     "TEXT": [
       "HP healed: "
     ]
@@ -297,8 +303,8 @@
     "TEXT": [
       "Cards drawn: ",
       " NL Energy gained: ",
-      " NL Cards per battle: ",
-      " NL Energy per battle: "
+      " NL Cards per combat: ",
+      " NL Energy per combat: "
     ]
   },
   "STATS:InkBottle": {
@@ -344,6 +350,21 @@
   "STATS:OrangePellets": {
     "TEXT": [
       "Debuffs cleared: "
+    ]
+  },
+  "STATS:WarpedTongs": {
+    "TEXT": [
+      "Cards upgraded: "
+    ]
+  },
+  "STATS:Shovel": {
+    "TEXT": [
+      "Relics dug: "
+    ]
+  },
+  "STATS:Centennial Puzzle": {
+    "TEXT": [
+      "Cards drawn: "
     ]
   }
 }
