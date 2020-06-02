@@ -408,5 +408,10 @@
     "TEXT": [
       "Curses created: "
     ]
+  },
+  "STATS:Chemical X": {
+    "TEXT": [
+      "X-Cost cards played: "
+    ]
   }
 }
