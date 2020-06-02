@@ -25,6 +25,7 @@ public class AbstractRelicPatch {
         return CardCrawlGame.mode == CardCrawlGame.GameMode.GAMEPLAY && AbstractDungeon.player != null;
     }
 
+    @SuppressWarnings("unchecked")
     public static void Prefix(AbstractRelic _instance, SpriteBatch sb) {
         if (RelicStats.hasStatsMessage(_instance.relicId) && shouldShowStats()) {
             addedTip = true;
