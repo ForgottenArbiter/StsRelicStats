@@ -388,5 +388,15 @@
     "TEXT": [
       "HP healed: "
     ]
+  },
+  "STATS:Question Card": {
+    "TEXT": [
+      "Extra cards: "
+    ]
+  },
+  "STATS:Tiny Chest": {
+    "TEXT": [
+      "Chests created: "
+    ]
   }
 }
