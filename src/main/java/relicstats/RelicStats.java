@@ -330,6 +330,7 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
 
     }
 
+    @SuppressWarnings("unchecked")
     public void receivePostUpdate() {
         SlayTheRelicsIntegration.clear();
         if (CardCrawlGame.isInARun() && getTwitchIntegrationOption()) {

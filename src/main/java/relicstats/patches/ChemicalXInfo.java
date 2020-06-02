@@ -33,6 +33,7 @@ public class ChemicalXInfo extends CombatStatsInfo {
             method = SpirePatch.CONSTRUCTOR
     )
     public static class ChemicalXFlash {
+        // Thanks to kiooeht and Gk for advice/reference code for this one
         public static void Raw(CtBehavior ctMethodToPatch) throws NotFoundException, CannotCompileException {
             CtClass ctClass = ctMethodToPatch.getDeclaringClass();
             CtClass superclass = ctClass.getSuperclass();
