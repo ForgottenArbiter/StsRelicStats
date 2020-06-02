@@ -149,6 +149,8 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
         registerCustomStats(CentennialPuzzle.ID, CentennialPuzzleInfo.getInstance());
         registerCustomStats(HappyFlower.ID, HappyFlowerInfo.getInstance());
         registerCustomStats(DreamCatcher.ID, new DreamCatcherInfo());
+        registerCustomStats(PeacePipe.ID, new PeacePipeInfo());
+        registerCustomStats(LizardTail.ID, new LizardTailInfo());
 
         System.out.println("Custom stat relics: ");
         System.out.println(Arrays.toString(statsInfoHashMap.keySet().toArray()));

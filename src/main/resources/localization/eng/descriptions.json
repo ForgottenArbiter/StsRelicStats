@@ -378,5 +378,15 @@
     "TEXT": [
       "Extra card rewards: "
     ]
+  },
+  "STATS:Peace Pipe": {
+    "TEXT": [
+      "Cards toked: "
+    ]
+  },
+  "STATS:Lizard Tail": {
+    "TEXT": [
+      "HP healed: "
+    ]
   }
 }
