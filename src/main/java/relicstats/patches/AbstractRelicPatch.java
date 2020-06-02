@@ -26,7 +26,7 @@ public class AbstractRelicPatch {
     }
 
     public static void Prefix(AbstractRelic _instance, SpriteBatch sb) {
-        if (RelicStats.hasStats(_instance.relicId) && shouldShowStats()) {
+        if (RelicStats.hasStatsMessage(_instance.relicId) && shouldShowStats()) {
             addedTip = true;
             originalTips = _instance.tips;
             _instance.tips = (ArrayList<PowerTip>)_instance.tips.clone();

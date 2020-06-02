@@ -7,13 +7,15 @@
   "STATS:EXTENDED": {
     "TEXT": [
       " NL Per turn: ",
-      " NL Per combat: "
+      " NL Per combat: ",
+      "Floor obtained: "
     ]
   },
   "STATS:OPTION": {
     "TEXT": [
       "Enable per combat and per turn stat reporting for combat relics",
-      "Enable integration with the Slay the Relics mod"
+      "Enable integration with the Slay the Relics mod",
+      "Display floor obtained for all relics"
     ]
   },
   "STATS:Snecko Eye": {
@@ -365,6 +367,11 @@
   "STATS:Centennial Puzzle": {
     "TEXT": [
       "Cards drawn: "
+    ]
+  },
+  "STATS:Happy Flower": {
+    "TEXT": [
+      "Energy gained: "
     ]
   }
 }

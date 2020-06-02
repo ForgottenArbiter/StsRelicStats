@@ -8,6 +8,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -29,16 +30,18 @@ import java.util.HashMap;
 import java.util.Properties;
 
 @SpireInitializer
-public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, OnStartBattleSubscriber, CustomSavableRaw {
+public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, PostUpdateSubscriber, PostInitializeSubscriber, PreStartGameSubscriber, EditStringsSubscriber, OnStartBattleSubscriber, CustomSavableRaw {
 
     private static final Logger logger = LogManager.getLogger(RelicStats.class.getName());
     private static HashMap<String, HasCustomStats> statsInfoHashMap = new HashMap<>();
+    private static String floorObtainedString;
     public static String statsHeader;
     public static int turnCount;
     public static int battleCount;
 
     private static String EXTENDED_STATS_OPTION = "extendedStats";
     private static String TWITCH_OPTION = "slayTheRelics";
+    private static String FLOOR_STATS_OPTION = "floorStats";
     private static SpireConfig statsConfig;
 
     public RelicStats(){
@@ -48,6 +51,7 @@ public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscribe
             Properties defaults = new Properties();
             defaults.put(EXTENDED_STATS_OPTION, Boolean.toString(true));
             defaults.put(TWITCH_OPTION, Boolean.toString(false));
+            defaults.put(FLOOR_STATS_OPTION, Boolean.toString(false));
             statsConfig = new SpireConfig("Relic Stats", "config", defaults);
             statsConfig.save();
         } catch (IOException e) {
@@ -72,6 +76,7 @@ public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscribe
 
     public void receivePostInitialize() {
         statsHeader = CardCrawlGame.languagePack.getUIString("STATS:HEADER").TEXT[0];
+        floorObtainedString = CardCrawlGame.languagePack.getUIString("STATS:EXTENDED").TEXT[2];
         registerCustomStats(SneckoEye.ID, new SneckoInfo());
         registerCustomStats(CeramicFish.ID, new CeramicFishInfo());
         registerCustomStats(MawBank.ID, new MawBankInfo());
@@ -142,11 +147,13 @@ public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscribe
         registerCustomStats(WarpedTongs.ID, WarpedTongsInfo.getInstance());
         registerCustomStats(Shovel.ID, new ShovelInfo());
         registerCustomStats(CentennialPuzzle.ID, CentennialPuzzleInfo.getInstance());
+        registerCustomStats(HappyFlower.ID, HappyFlowerInfo.getInstance());
 
         System.out.println("Custom stat relics: ");
         System.out.println(Arrays.toString(statsInfoHashMap.keySet().toArray()));
 
         BaseMod.addSaveField("stats_master_turn_counts", this);
+        BaseMod.addSaveField("relic_floor_stats", new RelicObtainStats());
 
         setUpOptions();
     }
@@ -163,6 +170,17 @@ public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscribe
             return false;
         }
         return statsConfig.getBool(TWITCH_OPTION);
+    }
+
+    public static boolean getFloorStatsOtion() {
+        if (statsConfig == null) {
+            return false;
+        }
+        return statsConfig.getBool(FLOOR_STATS_OPTION);
+    }
+
+    public void receiveRelicGet(AbstractRelic relic) {
+        RelicObtainStats.obtainRelic(relic.relicId, AbstractDungeon.floorNum, battleCount, turnCount);
     }
 
     private void setUpOptions() {
@@ -197,6 +215,21 @@ public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscribe
                     }
                 });
         settingsPanel.addUIElement(slayTheRelicsButton);
+        ModLabeledToggleButton floorStatsButton = new ModLabeledToggleButton(
+                CardCrawlGame.languagePack.getUIString("STATS:OPTION").TEXT[2],
+                350, 605, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                getFloorStatsOtion(), settingsPanel, modLabel -> {},
+                modToggleButton -> {
+                    if (statsConfig != null) {
+                        statsConfig.setBool(FLOOR_STATS_OPTION, modToggleButton.enabled);
+                        try {
+                            statsConfig.save();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+        settingsPanel.addUIElement(floorStatsButton);
         BaseMod.registerModBadge(ImageMaster.loadImage("Icon.png"),"Relic Stats", "Forgotten Arbiter", null, settingsPanel);
     }
 
@@ -204,9 +237,16 @@ public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscribe
         BaseMod.loadCustomStringsFile(UIStrings.class, "localization/eng/descriptions.json");
     }
 
-    public void receivePostDungeonInitialize() {
+    public void receivePreStartGame() {
         for(HasCustomStats statsInfo : statsInfoHashMap.values()) {
             statsInfo.resetStats();
+        }
+        RelicObtainStats.reset();
+    }
+
+    public void receiveStartGame() {
+        for (AbstractRelic relic : AbstractDungeon.player.relics) {
+            RelicObtainStats.obtainRelic(relic.relicId, 0, 0, 0);
         }
     }
 
@@ -214,11 +254,38 @@ public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscribe
         return statsInfoHashMap.containsKey(relicId);
     }
 
-    public static String getStatsDescription(String relicId) {
-        if (getExtendedStatsOption()) {
-            return statsInfoHashMap.get(relicId).getExtendedStatsDescription();
+    public static boolean hasStatsMessage(String relicId) {
+        if (getFloorStatsOtion() && RelicObtainStats.hasRelic(relicId)) {
+            return true;
         } else {
-            return statsInfoHashMap.get(relicId).getStatsDescription();
+            return hasStats(relicId);
+        }
+    }
+
+    public static String getFloorObtainedDescription(String relicId) {
+        if (RelicObtainStats.hasRelic(relicId)) {
+            String message = floorObtainedString + RelicObtainStats.getFloor(relicId);
+            if (hasStats(relicId)) {
+                message += " NL ";
+            }
+            return message;
+        } else {
+            return "";
+        }
+    }
+
+    public static String getStatsDescription(String relicId) {
+        String prefix = "";
+        if (getFloorStatsOtion()) {
+            prefix = getFloorObtainedDescription(relicId);
+        }
+        if (!hasStats(relicId)) {
+            return prefix;
+        }
+        if (getExtendedStatsOption()) {
+            return prefix + statsInfoHashMap.get(relicId).getExtendedStatsDescription();
+        } else {
+            return prefix + statsInfoHashMap.get(relicId).getStatsDescription();
         }
     }
 
@@ -231,6 +298,7 @@ public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscribe
         }
         battleCount += 1;
     }
+
 
     @Override
     public JsonElement onSaveRaw() {
@@ -268,4 +336,5 @@ public class RelicStats implements PostUpdateSubscriber, PostInitializeSubscribe
             }
         }
     }
+
 }

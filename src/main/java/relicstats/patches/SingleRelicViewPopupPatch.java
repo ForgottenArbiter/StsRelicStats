@@ -28,7 +28,7 @@ public class SingleRelicViewPopupPatch {
     )
     public static void patch(SingleRelicViewPopup _instance, SpriteBatch sb, ArrayList<PowerTip> t) {
         AbstractRelic relic = (AbstractRelic)ReflectionHacks.getPrivate(_instance, SingleRelicViewPopup.class, "relic");
-        if (RelicStats.hasStats(relic.relicId) && AbstractDungeon.isPlayerInDungeon()) {
+        if (RelicStats.hasStatsMessage(relic.relicId) && AbstractDungeon.isPlayerInDungeon()) {
             t.add(new PowerTip(RelicStats.statsHeader, RelicStats.getStatsDescription(relic.relicId)));
         }
     }
