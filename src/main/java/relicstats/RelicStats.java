@@ -153,6 +153,8 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
         registerCustomStats(LizardTail.ID, new LizardTailInfo());
         registerCustomStats(QuestionCard.ID, new QuestionCardInfo());
         registerCustomStats(TinyChest.ID, new TinyChestInfo());
+        registerCustomStats(BustedCrown.ID, new BustedCrownInfo());
+        registerCustomStats(CursedKey.ID, new CursedKeyInfo());
 
         System.out.println("Custom stat relics: ");
         System.out.println(Arrays.toString(statsInfoHashMap.keySet().toArray()));

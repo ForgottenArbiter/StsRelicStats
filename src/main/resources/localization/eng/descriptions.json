@@ -391,12 +391,22 @@
   },
   "STATS:Question Card": {
     "TEXT": [
-      "Extra cards: "
+      "Extra card options: "
     ]
   },
   "STATS:Tiny Chest": {
     "TEXT": [
       "Chests created: "
+    ]
+  },
+  "STATS:Busted Crown": {
+    "TEXT": [
+      "Card options lost: "
+    ]
+  },
+  "STATS:Cursed Key": {
+    "TEXT": [
+      "Curses created: "
     ]
   }
 }
