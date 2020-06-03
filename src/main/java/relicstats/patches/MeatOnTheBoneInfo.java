@@ -23,7 +23,7 @@ public class MeatOnTheBoneInfo extends StatsInfo {
 
     @Override
     public String getStatsDescription() {
-        return String.format("%s%d NL %s", description[0], healing, new GoldenIdolInfo().getStatsDescription());
+        return String.format("%s%d", description[0], healing);
     }
 
     @Override
