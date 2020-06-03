@@ -413,5 +413,19 @@
     "TEXT": [
       "X-Cost cards played: "
     ]
+  },
+  "STATS:Yang": {
+    "TEXT": [
+      "Temp. dexterity gained: "
+    ]
+  },
+  "STATS:Cables": {
+    "TEXT": [
+      "Orbs triggered: ",
+      " NL Lightning orbs: ",
+      " NL Frost orbs: ",
+      " NL Dark orbs: ",
+      " NL Plasma orbs: "
+    ]
   }
 }
