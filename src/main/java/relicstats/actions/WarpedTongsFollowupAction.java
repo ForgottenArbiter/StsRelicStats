@@ -1,7 +1,7 @@
 package relicstats.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import relicstats.patches.WarpedTongsInfo;
+import relicstats.patches.relics.WarpedTongsInfo;
 
 public class WarpedTongsFollowupAction extends AbstractGameAction {
 
