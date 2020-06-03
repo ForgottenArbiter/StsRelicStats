@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.screens.DeathScreen;
+import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import relicstats.RelicStats;
 
 import java.util.ArrayList;
@@ -22,6 +23,9 @@ public class AbstractRelicPatch {
     private static ArrayList<PowerTip> originalTips;
 
     public static boolean shouldShowStats() {
+        if (CardCrawlGame.mode == CardCrawlGame.GameMode.CHAR_SELECT && CardCrawlGame.mainMenuScreen.screen == MainMenuScreen.CurScreen.RUN_HISTORY) {
+            return RunHistoryScreenPatch.runHistoryHasStats;
+        }
         return CardCrawlGame.mode == CardCrawlGame.GameMode.GAMEPLAY && AbstractDungeon.player != null;
     }
 

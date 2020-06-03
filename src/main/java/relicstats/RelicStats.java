@@ -44,6 +44,8 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
     private static String FLOOR_STATS_OPTION = "floorStats";
     private static SpireConfig statsConfig;
 
+    public static RelicStats mod;
+
     public RelicStats(){
         BaseMod.subscribe(this);
 
@@ -61,7 +63,7 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
     }
 
     public static void initialize() {
-        RelicStats mod = new RelicStats();
+        mod = new RelicStats();
     }
 
     public static void registerCustomStats(String relicId, HasCustomStats customStats) {
@@ -164,6 +166,10 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
         BaseMod.addSaveField("relic_floor_stats", new RelicObtainStats());
 
         setUpOptions();
+    }
+
+    public static HasCustomStats getCustomStats(String relicId) {
+        return statsInfoHashMap.get(relicId);
     }
 
     public static boolean getExtendedStatsOption() {

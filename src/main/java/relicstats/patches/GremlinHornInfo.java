@@ -17,6 +17,7 @@ import relicstats.RelicStats;
 import relicstats.actions.CardDrawFollowupAction;
 import relicstats.actions.PreCardDrawAction;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 @SpirePatch(
@@ -67,9 +68,9 @@ public class GremlinHornInfo extends CombatStatsInfo implements AmountAdjustment
             num_combats = 1;
         }
         builder.append(description[2]);
-        builder.append((float) (cards) / num_combats);
+        builder.append(new DecimalFormat("#.###").format((float) (cards) / num_combats));
         builder.append(description[3]);
-        builder.append((float) (energy) / num_combats);
+        builder.append(new DecimalFormat("#.###").format((float) (energy) / num_combats));
         return builder.toString();
     }
 
