@@ -5,13 +5,12 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public abstract class CombatStatsInfo extends StatsInfo {
 
     protected int amount;
-    protected int combatObtained;
-    protected int turnObtained;
 
     protected static String[] description;
 
@@ -21,31 +20,29 @@ public abstract class CombatStatsInfo extends StatsInfo {
         return getBaseDescription() + amount;
     }
 
-    public String getExtendedStatsDescription() {
+    public String getExtendedStatsDescription(int totalCombats, int totalTurns) {
         if (description == null) {
             description = CardCrawlGame.languagePack.getUIString(getLocId("EXTENDED")).TEXT;
         }
         StringBuilder builder = new StringBuilder();
         builder.append(getStatsDescription());
-        int num_turns = (RelicStats.turnCount - turnObtained);
+        int num_turns = totalTurns;
         if (num_turns < 1) {
             num_turns = 1;
         }
-        int num_combats = (RelicStats.battleCount - combatObtained);
+        int num_combats = totalCombats;
         if (num_combats < 1) {
             num_combats = 1;
         }
         builder.append(description[0]);
-        builder.append((float) (amount) / num_turns);
+        builder.append(new DecimalFormat("#.###").format((float) (amount) / num_turns));
         builder.append(description[1]);
-        builder.append((float) (amount) / num_combats);
+        builder.append(new DecimalFormat("#.###").format((float) (amount) / num_combats));
         return builder.toString();
     }
 
     public void resetStats() {
         amount = 0;
-        combatObtained = -1;
-        turnObtained = -1;
     }
 
     @Override
@@ -53,8 +50,6 @@ public abstract class CombatStatsInfo extends StatsInfo {
         Gson gson = new Gson();
         ArrayList<Integer> stats = new ArrayList<>();
         stats.add(amount);
-        stats.add(combatObtained);
-        stats.add(turnObtained);
         return gson.toJsonTree(stats);
     }
 
@@ -63,18 +58,8 @@ public abstract class CombatStatsInfo extends StatsInfo {
         if (jsonElement != null) {
             JsonArray jsonArray = jsonElement.getAsJsonArray();
             amount = jsonArray.get(0).getAsInt();
-            combatObtained = jsonArray.get(1).getAsInt();
-            turnObtained = jsonArray.get(2).getAsInt();
         } else {
             resetStats();
-        }
-    }
-
-    @Override
-    public void onCombatStartForStats() {
-        if (combatObtained == -1) {
-            combatObtained = RelicStats.battleCount;
-            turnObtained = RelicStats.turnCount;
         }
     }
 

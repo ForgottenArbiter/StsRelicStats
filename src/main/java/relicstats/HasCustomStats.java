@@ -8,12 +8,9 @@ public interface HasCustomStats extends CustomSavableRaw {
     String getStatsDescription();
 
     // Gets the stats description that is displayed to the user if the extended stats are enabled
-    String getExtendedStatsDescription();
+    String getExtendedStatsDescription(int totalCombats, int totalTurns);
 
     // Resets the stats for the relic
     void resetStats();
-
-    // Is called at the start of a combat
-    void onCombatStartForStats();
 
 }

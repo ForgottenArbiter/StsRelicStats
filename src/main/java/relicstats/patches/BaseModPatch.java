@@ -45,9 +45,9 @@ public class BaseModPatch {
                 }
 
                 @Override
-                public String getExtendedStatsDescription() {
+                public String getExtendedStatsDescription(int totalCombats, int totalTurns) {
                     try {
-                        return (String)getExtendedStatsDescription.invoke(relic);
+                        return (String)getExtendedStatsDescription.invoke(relic, totalCombats, totalTurns);
                     } catch (IllegalAccessException | InvocationTargetException e) {
                         handleError(e);
                         return "";
@@ -61,10 +61,6 @@ public class BaseModPatch {
                     } catch (IllegalAccessException | InvocationTargetException e) {
                         handleError(e);
                     }
-                }
-
-                @Override
-                public void onCombatStartForStats() {
                 }
 
                 @Override

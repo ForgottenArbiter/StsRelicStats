@@ -296,7 +296,9 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
             return prefix;
         }
         if (getExtendedStatsOption()) {
-            return prefix + statsInfoHashMap.get(relicId).getExtendedStatsDescription();
+            int totalCombats = battleCount - RelicObtainStats.getBattle(relicId);
+            int totalTurns = turnCount - RelicObtainStats.getTurn(relicId);
+            return prefix + statsInfoHashMap.get(relicId).getExtendedStatsDescription(totalCombats, totalTurns);
         } else {
             return prefix + statsInfoHashMap.get(relicId).getStatsDescription();
         }
@@ -304,12 +306,8 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-        for (AbstractRelic relic : AbstractDungeon.player.relics) {
-            if (statsInfoHashMap.containsKey(relic.relicId)) {
-                statsInfoHashMap.get(relic.relicId).onCombatStartForStats();
-            }
-        }
         battleCount += 1;
+        SelfFormingClayInfo.getInstance().onCombatStart();
     }
 
 

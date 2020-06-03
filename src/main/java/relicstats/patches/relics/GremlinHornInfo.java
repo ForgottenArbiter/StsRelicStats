@@ -60,10 +60,10 @@ public class GremlinHornInfo extends CombatStatsInfo implements AmountAdjustment
     }
 
     @Override
-    public String getExtendedStatsDescription() {
+    public String getExtendedStatsDescription(int totalCombats, int totalTurns) {
         StringBuilder builder = new StringBuilder();
         builder.append(getStatsDescription());
-        int num_combats = (RelicStats.battleCount - combatObtained);
+        int num_combats = totalCombats;
         if (num_combats < 1) {
             num_combats = 1;
         }
@@ -78,8 +78,6 @@ public class GremlinHornInfo extends CombatStatsInfo implements AmountAdjustment
     public void resetStats() {
         cards = 0;
         energy = 0;
-        combatObtained = -1;
-        turnObtained = -1;
     }
 
     @Override
@@ -88,8 +86,6 @@ public class GremlinHornInfo extends CombatStatsInfo implements AmountAdjustment
         ArrayList<Integer> stats = new ArrayList<>();
         stats.add(cards);
         stats.add(energy);
-        stats.add(combatObtained);
-        stats.add(turnObtained);
         return gson.toJsonTree(stats);
     }
 
@@ -99,8 +95,6 @@ public class GremlinHornInfo extends CombatStatsInfo implements AmountAdjustment
             JsonArray jsonArray = jsonElement.getAsJsonArray();
             cards = jsonArray.get(0).getAsInt();
             energy = jsonArray.get(1).getAsInt();
-            combatObtained = jsonArray.get(2).getAsInt();
-            turnObtained = jsonArray.get(3).getAsInt();
         } else {
             resetStats();
         }

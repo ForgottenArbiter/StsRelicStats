@@ -4,7 +4,7 @@ public abstract class StatsInfo implements HasCustomStats {
 
     public abstract String getStatsDescription();
 
-    public String getExtendedStatsDescription() {
+    public String getExtendedStatsDescription(int totalCombats, int totalTurns) {
         return getStatsDescription();
     }
 
@@ -12,10 +12,6 @@ public abstract class StatsInfo implements HasCustomStats {
 
     protected static String getLocId(String relicId) {
         return "STATS:" + relicId;
-    }
-
-    public void onCombatStartForStats() {
-
     }
 
 }

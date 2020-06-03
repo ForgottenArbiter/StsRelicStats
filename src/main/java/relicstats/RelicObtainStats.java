@@ -29,15 +29,15 @@ public class RelicObtainStats implements CustomSavableRaw {
     }
 
     public static int getFloor(String relic) {
-        return floorObtained.get(relic);
+        return floorObtained.getOrDefault(relic, 0);
     }
 
     public static int getBattle(String relic) {
-        return battleObtained.get(relic);
+        return battleObtained.getOrDefault(relic, 0);
     }
 
     public static int getTurn(String relic) {
-        return turnObtained.get(relic);
+        return turnObtained.getOrDefault(relic, 0);
     }
 
     @Override

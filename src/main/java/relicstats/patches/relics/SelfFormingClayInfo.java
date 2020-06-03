@@ -32,8 +32,7 @@ public class SelfFormingClayInfo extends CombatStatsInfo {
         return description[0];
     }
 
-    public void onCombatStartForStats() {
-        super.onCombatStartForStats();
+    public void onCombatStart() {
         clayBlock = 0;
     }
 
