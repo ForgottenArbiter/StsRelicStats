@@ -162,6 +162,8 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
         registerCustomStats(EmotionChip.ID, EmotionChipInfo.getInstance());
         registerCustomStats(Melange.ID, MelangeInfo.getInstance());
         registerCustomStats(GoldenEye.ID, GoldenEyeInfo.getInstance());
+        registerCustomStats(RegalPillow.ID, new RegalPillowInfo());
+        registerCustomStats(Waffle.ID, new LeesWaffleInfo());
 
         System.out.println("Custom stat relics: ");
         System.out.println(Arrays.toString(statsInfoHashMap.keySet().toArray()));

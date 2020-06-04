@@ -446,5 +446,15 @@
     "TEXT": [
       "Extra cards scried: "
     ]
+  },
+  "STATS:Regal Pillow": {
+    "TEXT": [
+      "HP healed: "
+    ]
+  },
+  "STATS:Lee's Waffle": {
+    "TEXT": [
+      "HP healed: "
+    ]
   }
 }
