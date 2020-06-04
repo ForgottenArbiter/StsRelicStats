@@ -441,5 +441,10 @@
     "TEXT": [
       "Cards scried: "
     ]
+  },
+  "STATS:GoldenEye": {
+    "TEXT": [
+      "Extra cards scried: "
+    ]
   }
 }
