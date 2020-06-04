@@ -456,5 +456,10 @@
     "TEXT": [
       "HP healed: "
     ]
+  },
+  "STATS:Mummified Hand": {
+    "TEXT": [
+      "Energy discounted: "
+    ]
   }
 }
