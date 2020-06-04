@@ -37,14 +37,14 @@ public class CharonsAshesInfo extends CombatStatsInfo implements AmountIncreaseC
     @SpirePrefixPatch
     public static void prefix(CharonsAshes _instance, AbstractCard c) {
         preAction = new PreAoeDamageAction();
-        AbstractDungeon.actionManager.addToBottom(preAction);
+        CharonsAshesInfo info = getInstance();
+        AoeDamageFollowupAction postAction = new AoeDamageFollowupAction(info, CharonsAshesInfo.preAction);
+        AbstractDungeon.actionManager.addToTop(postAction);
     }
 
     @SpirePostfixPatch
     public static void postfix(CharonsAshes _instance, AbstractCard c) {
-        CharonsAshesInfo info = getInstance();
-        AoeDamageFollowupAction postAction = new AoeDamageFollowupAction(info, CharonsAshesInfo.preAction);
-        AbstractDungeon.actionManager.addToBottom(postAction);
+        AbstractDungeon.actionManager.addToTop(preAction);
     }
 
     @Override

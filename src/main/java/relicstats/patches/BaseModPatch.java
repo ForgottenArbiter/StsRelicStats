@@ -22,7 +22,7 @@ public class BaseModPatch {
                 RelicStats.registerCustomStats(relic.relicId, (HasCustomStats)relic);
             }
             Method getStatsDescription = relicClass.getMethod("getStatsDescription");
-            Method getExtendedStatsDescription = relicClass.getMethod("getExtendedStatsDescription");
+            Method getExtendedStatsDescription = relicClass.getMethod("getExtendedStatsDescription", int.class, int.class);
             Method resetStats = relicClass.getMethod("resetStats");
             Method onSaveStats = relicClass.getMethod("onSaveStats");
             Method onLoadStats = relicClass.getMethod("onLoadStats", JsonElement.class);
