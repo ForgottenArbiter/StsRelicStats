@@ -159,6 +159,8 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
         registerCustomStats(ChemicalX.ID, ChemicalXInfo.getInstance());
         registerCustomStats(Duality.ID, DualityInfo.getInstance());
         registerCustomStats(GoldPlatedCables.ID, GoldPlatedCablesInfo.getInstance());
+        registerCustomStats(EmotionChip.ID, EmotionChipInfo.getInstance());
+        registerCustomStats(Melange.ID, MelangeInfo.getInstance());
 
         System.out.println("Custom stat relics: ");
         System.out.println(Arrays.toString(statsInfoHashMap.keySet().toArray()));

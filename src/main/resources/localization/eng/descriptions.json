@@ -427,5 +427,19 @@
       " NL Dark orbs: ",
       " NL Plasma orbs: "
     ]
+  },
+  "STATS:Emotion Chip": {
+    "TEXT": [
+      "Orbs triggered: ",
+      " NL Lightning orbs: ",
+      " NL Frost orbs: ",
+      " NL Dark orbs: ",
+      " NL Plasma orbs: "
+    ]
+  },
+  "STATS:Melange": {
+    "TEXT": [
+      "Cards scried: "
+    ]
   }
 }
