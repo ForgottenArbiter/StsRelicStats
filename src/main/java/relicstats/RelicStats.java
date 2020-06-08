@@ -255,7 +255,13 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
     }
 
     public void receiveEditStrings() {
-        BaseMod.loadCustomStringsFile(UIStrings.class, "localization/eng/descriptions.json");
+        switch (Settings.language) {
+            case ZHS:
+                BaseMod.loadCustomStringsFile(UIStrings.class,  "localization/zhs/descriptions.json");
+                break;
+            default:
+                BaseMod.loadCustomStringsFile(UIStrings.class, "localization/eng/descriptions.json");
+        }
     }
 
     public void receivePreStartGame() {

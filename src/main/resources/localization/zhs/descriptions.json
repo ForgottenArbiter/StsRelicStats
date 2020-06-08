@@ -1,0 +1,465 @@
+{
+  "STATS:HEADER": {
+    "TEXT": [
+      "统计"
+    ]
+  },
+  "STATS:EXTENDED": {
+    "TEXT": [
+      " NL 每回合： ",
+      " NL 每场战斗： ",
+      "获得楼层： "
+    ]
+  },
+  "STATS:OPTION": {
+    "TEXT": [
+      "开启每回合和每场战斗开始时的战斗遗物报告",
+      "与Slay the Relics集成",
+      "显示遗物获得楼层数"
+    ]
+  },
+  "STATS:Snecko Eye": {
+    "TEXT": [
+      "卡牌耗能计数: NL 0 费： ",
+      " NL 1 费： ",
+      " NL 2 费： ",
+      " NL 3 费： "
+    ]
+  },
+  "STATS:CeramicFish": {
+    "TEXT": [
+      "金币获得： "
+    ]
+  },
+  "STATS:MawBank": {
+    "TEXT": [
+      "金币获得： "
+    ]
+  },
+  "STATS:Toy Ornithopter": {
+    "TEXT": [
+      "回血： "
+    ]
+  },
+  "STATS:Burning Blood": {
+    "TEXT": [
+      "回血： "
+    ]
+  },
+  "STATS:Eternal Feather": {
+    "TEXT": [
+      "回血： "
+    ]
+  },
+  "STATS:MealTicket": {
+    "TEXT": [
+      "回血： "
+    ]
+  },
+  "STATS:SsserpentHead": {
+    "TEXT": [
+      "获得金币： "
+    ]
+  },
+  "STATS:Golden Idol": {
+    "TEXT": [
+      "额外获得金币： "
+    ]
+  },
+  "STATS:Bloody Idol": {
+    "TEXT": [
+      "回血： "
+    ]
+  },
+  "STATS:FaceOfCleric": {
+    "TEXT": [
+      "获得最大生命： "
+    ]
+  },
+  "STATS:Black Star": {
+    "TEXT": [
+      "额外遗物数： "
+    ]
+  },
+  "STATS:Blood Vial": {
+    "TEXT": [
+      "回血： "
+    ]
+  },
+  "STATS:Juzu Bracelet": {
+    "TEXT": [
+      "避免战斗数： "
+    ]
+  },
+  "STATS:Ectoplasm": {
+    "TEXT": [
+      "失去金币： "
+    ]
+  },
+  "STATS:Sozu": {
+    "TEXT": [
+      "失去药水： "
+    ]
+  },
+  "STATS:Boot": {
+    "TEXT": [
+      "增加伤害： "
+    ]
+  },
+  "STATS:PreservedInsect": {
+    "TEXT": [
+      "减少血量： "
+    ]
+  },
+  "STATS:Meat on the Bone": {
+    "TEXT": [
+      "回血： "
+    ]
+  },
+  "STATS:Pantograph": {
+    "TEXT": [
+      "回血： "
+    ]
+  },
+  "STATS:Torii": {
+    "TEXT": [
+      "阻止伤害： "
+    ]
+  },
+  "STATS:TungstenRod": {
+    "TEXT": [
+      "阻止伤害： "
+    ]
+  },
+  "STATS:Mercury Hourglass": {
+    "TEXT": [
+      "造成伤害： "
+    ]
+  },
+  "STATS:StoneCalendar": {
+    "TEXT": [
+      "造成伤害： "
+    ]
+  },
+  "STATS:Darkstone Periapt": {
+    "TEXT": [
+      "获得最大生命： "
+    ]
+  },
+  "STATS:Singing Bowl": {
+    "TEXT": [
+      "获得最大生命： "
+    ]
+  },
+  "STATS:Shuriken": {
+    "TEXT": [
+      "获得力量： "
+    ]
+  },
+  "STATS:Kunai": {
+    "TEXT": [
+      "获得敏捷： "
+    ]
+  },
+  "STATS:Ornamental Fan": {
+    "TEXT": [
+      "获得格挡： "
+    ]
+  },
+  "STATS:Mark of the Bloom": {
+    "TEXT": [
+      "阻止回复： "
+    ]
+  },
+  "STATS:Art of War": {
+    "TEXT": [
+      "获得能量： "
+    ]
+  },
+  "STATS:Nunchaku": {
+    "TEXT": [
+      "获得能量： "
+    ]
+  },
+  "STATS:Snake Skull": {
+    "TEXT": [
+      "给予中毒： "
+    ]
+  },
+  "STATS:Letter Opener": {
+    "TEXT": [
+      "造成伤害： "
+    ]
+  },
+  "STATS:Sundial": {
+    "TEXT": [
+      "获得能量："
+    ]
+  },
+  "STATS:Charon's Ashes": {
+    "TEXT": [
+      "造成伤害： "
+    ]
+  },
+  "STATS:CloakClasp": {
+    "TEXT": [
+      "获得格挡： "
+    ]
+  },
+  "STATS:Pocketwatch": {
+    "TEXT": [
+      "抽牌： "
+    ]
+  },
+  "STATS:Tingsha": {
+    "TEXT": [
+      "造成伤害： "
+    ]
+  },
+  "STATS:Tough Bandages": {
+    "TEXT": [
+      "获得格挡： "
+    ]
+  },
+  "STATS:VioletLotus": {
+    "TEXT": [
+      "获得能量： "
+    ]
+  },
+  "STATS:TheAbacus": {
+    "TEXT": [
+      "获得格挡： "
+    ]
+  },
+  "STATS:Dead Branch": {
+    "TEXT": [
+      "卡牌生成 "
+    ]
+  },
+  "STATS:Unceasing Top": {
+    "TEXT": [
+      "抽牌： "
+    ]
+  },
+  "STATS:FrozenCore": {
+    "TEXT": [
+      "生成冰球： "
+    ]
+  },
+  "STATS:HoveringKite": {
+    "TEXT": [
+      "能量获得： "
+    ]
+  },
+  "STATS:Runic Cube": {
+    "TEXT": [
+      "抽牌： "
+    ]
+  },
+  "STATS:Strange Spoon": {
+    "TEXT": [
+      "卡牌循环： "
+    ]
+  },
+  "STATS:Nloth's Gift": {
+    "TEXT": [
+      "额外稀有牌： "
+    ]
+  },
+  "STATS:Self Forming Clay": {
+    "TEXT": [
+      "获得格挡： "
+    ]
+  },
+  "STATS:Necronomicon": {
+    "TEXT": [
+      "双发攻击牌： "
+    ]
+  },
+  "STATS:Medical Kit": {
+    "TEXT": [
+      "消耗状态： "
+    ]
+  },
+  "STATS:Blue Candle": {
+    "TEXT": [
+      "消耗诅咒： "
+    ]
+  },
+  "STATS:Orichalcum": {
+    "TEXT": [
+      "获得格挡： "
+    ]
+  },
+  "STATS:Pen Nib": {
+    "TEXT": [
+      "伤害加倍： "
+    ]
+  },
+  "STATS:Smiling Mask": {
+    "TEXT": [
+      "省钱： "
+    ]
+  },
+  "STATS:Gremlin Horn": {
+    "TEXT": [
+      "抽牌： ",
+      " NL 能量获得： ",
+      " NL 每场战斗抽牌： ",
+      " NL 每场战斗能量获得: "
+    ]
+  },
+  "STATS:InkBottle": {
+    "TEXT": [
+      "抽牌： "
+    ]
+  },
+  "STATS:Bird Faced Urn": {
+    "TEXT": [
+      "回血： "
+    ]
+  },
+  "STATS:Champion Belt": {
+    "TEXT": [
+      "给予虚弱： "
+    ]
+  },
+  "STATS:Ginger": {
+    "TEXT": [
+      "免疫虚弱： "
+    ]
+  },
+  "STATS:Turnip": {
+    "TEXT": [
+      "免疫脆弱： "
+    ]
+  },
+  "STATS:Prayer Wheel": {
+    "TEXT": [
+      "额外卡牌奖励： "
+    ]
+  },
+  "STATS:Inserter": {
+    "TEXT": [
+      "栏位生成： "
+    ]
+  },
+  "STATS:HandDrill": {
+    "TEXT": [
+      "给予易伤： "
+    ]
+  },
+  "STATS:OrangePellets": {
+    "TEXT": [
+      "Debuff清除： "
+    ]
+  },
+  "STATS:WarpedTongs": {
+    "TEXT": [
+      "卡牌升级： "
+    ]
+  },
+  "STATS:Shovel": {
+    "TEXT": [
+      "挖掘遗物: "
+    ]
+  },
+  "STATS:Centennial Puzzle": {
+    "TEXT": [
+      "抽牌： "
+    ]
+  },
+  "STATS:Happy Flower": {
+    "TEXT": [
+      "获得能量： "
+    ]
+  },
+  "STATS:Dream Catcher": {
+    "TEXT": [
+      "额外卡牌奖励： "
+    ]
+  },
+  "STATS:Peace Pipe": {
+    "TEXT": [
+      "抽掉卡牌： "
+    ]
+  },
+  "STATS:Lizard Tail": {
+    "TEXT": [
+      "回血： "
+    ]
+  },
+  "STATS:Question Card": {
+    "TEXT": [
+      "额外卡牌奖励： "
+    ]
+  },
+  "STATS:Tiny Chest": {
+    "TEXT": [
+      "生成宝箱： "
+    ]
+  },
+  "STATS:Busted Crown": {
+    "TEXT": [
+      "失去卡牌奖励： "
+    ]
+  },
+  "STATS:Cursed Key": {
+    "TEXT": [
+      "生成诅咒： "
+    ]
+  },
+  "STATS:Chemical X": {
+    "TEXT": [
+      "打出X费牌： "
+    ]
+  },
+  "STATS:Yang": {
+    "TEXT": [
+      "生成临时敏捷： "
+    ]
+  },
+  "STATS:Cables": {
+    "TEXT": [
+      "充能球被动： ",
+      " NL 电球： ",
+      " NL 冰球： ",
+      " NL 黑球： ",
+      " NL 等离子球： "
+    ]
+  },
+  "STATS:Emotion Chip": {
+    "TEXT": [
+      "充能球被动： ",
+      " NL 电球： ",
+      " NL 冰球： ",
+      " NL 黑球： ",
+      " NL 等离子球： "
+    ]
+  },
+  "STATS:Melange": {
+    "TEXT": [
+      "预见卡牌： "
+    ]
+  },
+  "STATS:GoldenEye": {
+    "TEXT": [
+      "额外预见卡牌： "
+    ]
+  },
+  "STATS:Regal Pillow": {
+    "TEXT": [
+      "回血： "
+    ]
+  },
+  "STATS:Lee's Waffle": {
+    "TEXT": [
+      "回血： "
+    ]
+  },
+  "STATS:Mummified Hand": {
+    "TEXT": [
+      "减少费用： "
+    ]
+  }
+}
