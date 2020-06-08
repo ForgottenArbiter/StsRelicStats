@@ -44,7 +44,7 @@ public class StatsSaver {
                 RelicStats.mod.onLoadRaw(entry.getValue());
             } else if (entry.getKey().equals(OBTAIN_JSON_KEY)) {
                 new RelicObtainStats().onLoadRaw(entry.getValue());
-            } else {
+            } else if (RelicStats.hasStats(entry.getKey())){
                 RelicStats.getCustomStats(entry.getKey()).onLoadRaw(entry.getValue());
             }
         }
