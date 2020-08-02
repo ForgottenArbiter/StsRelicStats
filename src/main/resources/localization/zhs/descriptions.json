@@ -461,5 +461,15 @@
     "TEXT": [
       "减少费用： "
     ]
+  },
+  "STATS:Magic Flower": {
+    "TEXT": [
+      "回血： "
+    ]
+  },
+  "STATS:Bronze Scales": {
+    "TEXT": [
+      "造成伤害： "
+    ]
   }
 }
