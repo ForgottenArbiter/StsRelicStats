@@ -44,7 +44,6 @@ public class LetterOpenerInfo extends CombatStatsInfo implements AmountIncreaseC
     public static void do_before() {
         preAction = new PreAoeDamageAction();
         AbstractDungeon.actionManager.addToBottom(preAction);
-        System.out.println("before");
     }
 
     @SpireInstrumentPatch()

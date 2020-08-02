@@ -461,5 +461,15 @@
     "TEXT": [
       "Energy discounted: "
     ]
+  },
+  "STATS:Magic Flower": {
+    "TEXT": [
+      "HP healed: "
+    ]
+  },
+  "STATS:Bronze Scales": {
+    "TEXT": [
+      "Damage dealt: "
+    ]
   }
 }
