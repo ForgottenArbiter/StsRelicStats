@@ -471,5 +471,29 @@
     "TEXT": [
       "造成伤害： "
     ]
+  },
+  "STATS:Pandora's Box": {
+    "TEXT": [
+      "卡牌生成： ",
+      "未知"
+    ]
+  },
+  "STATS:Astrolabe": {
+    "TEXT": [
+      "卡牌生成： ",
+      "未知"
+    ]
+  },
+  "STATS:Whetstone": {
+    "TEXT": [
+      "卡牌升级： ",
+      "未知"
+    ]
+  },
+  "STATS:War Paint": {
+    "TEXT": [
+      "卡牌升级： ",
+      "未知"
+    ]
   }
 }

@@ -167,6 +167,10 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
         registerCustomStats(MummifiedHand.ID, MummifiedHandInfo.getInstance());
         registerCustomStats(MagicFlower.ID, MagicFlowerInfo.getInstance());
         registerCustomStats(BronzeScales.ID, BronzeScalesInfo.getInstance());
+        registerCustomStats(PandorasBox.ID, new PandorasBoxInfo());
+        registerCustomStats(Astrolabe.ID, new AstrolabeInfo());
+        registerCustomStats(Whetstone.ID, new WhetstoneInfo());
+        registerCustomStats(WarPaint.ID, new WarPaintInfo());
 
         System.out.println("Custom stat relics: ");
         System.out.println(Arrays.toString(statsInfoHashMap.keySet().toArray()));
