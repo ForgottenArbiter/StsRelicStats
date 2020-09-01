@@ -495,5 +495,15 @@
       "卡牌升级： ",
       "未知"
     ]
+  },
+  "STATS:Bag of Preparation": {
+    "TEXT": [
+      "抽牌： "
+    ]
+  },
+  "STATS:Gambling Chip": {
+    "TEXT": [
+      "抽牌： "
+    ]
   }
 }

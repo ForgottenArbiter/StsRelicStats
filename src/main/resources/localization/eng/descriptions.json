@@ -495,5 +495,15 @@
       "Cards upgraded: ",
       "Unknown"
     ]
+  },
+  "STATS:Bag of Preparation": {
+    "TEXT": [
+      "Cards drawn: "
+    ]
+  },
+  "STATS:Gambling Chip": {
+    "TEXT": [
+      "Cards drawn: "
+    ]
   }
 }

@@ -171,6 +171,8 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
         registerCustomStats(Astrolabe.ID, new AstrolabeInfo());
         registerCustomStats(Whetstone.ID, new WhetstoneInfo());
         registerCustomStats(WarPaint.ID, new WarPaintInfo());
+        registerCustomStats(BagOfPreparation.ID, BagOfPreparationInfo.getInstance());
+        registerCustomStats(GamblingChip.ID, GamblingChipInfo.getInstance());
 
         System.out.println("Custom stat relics: ");
         System.out.println(Arrays.toString(statsInfoHashMap.keySet().toArray()));
