@@ -505,5 +505,10 @@
     "TEXT": [
       "Cards drawn: "
     ]
+  },
+  "STATS:Ring of the Snake": {
+    "TEXT": [
+      "Cards drawn: "
+    ]
   }
 }
