@@ -57,7 +57,9 @@ public class SmilingMaskInfo extends StatsInfo {
             baseCost *= 0.5;
         }
         int discount = MathUtils.round(baseCost) - 50;
-        gold += discount;
+        if (AbstractDungeon.player.hasRelic(SmilingMask.ID)) {
+            gold += discount;
+        }
     }
 
 }
