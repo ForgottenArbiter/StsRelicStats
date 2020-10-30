@@ -278,6 +278,8 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
             statsInfo.resetStats();
         }
         RelicObtainStats.reset();
+        turnCount = 0;
+        battleCount = 0;
     }
 
     public void receiveStartGame() {
