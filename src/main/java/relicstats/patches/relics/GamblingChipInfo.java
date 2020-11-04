@@ -40,7 +40,9 @@ public class GamblingChipInfo extends CombatStatsInfo implements AmountAdjustmen
             locator = GamblingChipInfo.Locator1.class
     )
     public static void before(GamblingChipAction _instance) {
-        AbstractDungeon.actionManager.addToTop(new CardDrawFollowupAction(GamblingChipInfo.getInstance()));
+        if (AbstractDungeon.player.hasRelic(GamblingChip.ID)) {
+            AbstractDungeon.actionManager.addToTop(new CardDrawFollowupAction(GamblingChipInfo.getInstance()));
+        }
     }
 
     private static class Locator1 extends SpireInsertLocator {
