@@ -13,4 +13,7 @@ public interface HasCustomStats extends CustomSavableRaw {
     // Resets the stats for the relic
     void resetStats();
 
+    // Whether to show the relic's stats
+    boolean showStats();
+
 }

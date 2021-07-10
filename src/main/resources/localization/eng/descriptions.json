@@ -531,5 +531,10 @@
       "Gold saved: ",
       " NL (Includes the Courier and Membership Card)"
     ]
+  },
+  "STATS:Girya": {
+    "TEXT": [
+      "Times lifted: "
+    ]
   }
 }

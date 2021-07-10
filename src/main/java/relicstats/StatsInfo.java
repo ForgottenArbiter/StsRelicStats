@@ -14,4 +14,8 @@ public abstract class StatsInfo implements HasCustomStats {
         return "STATS:" + relicId;
     }
 
+    public boolean showStats() {
+        return true;
+    }
+
 }

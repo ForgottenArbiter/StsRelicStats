@@ -179,6 +179,7 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
         registerCustomStats(AncientTeaSet.ID, AncientTeaSetInfo.getInstance());
         registerCustomStats(MembershipCard.ID, new MembershipCardInfo());
         registerCustomStats(Courier.ID, new MembershipCardInfo());
+        registerCustomStats(Girya.ID, new GiryaInfo());
 
         // Joke relic stats
         registerCustomStats(FrozenEye.ID, new FrozenEyeInfo());
@@ -297,7 +298,11 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
     }
 
     public static boolean hasStats(String relicId) {
-        return statsInfoHashMap.containsKey(relicId);
+        if (statsInfoHashMap.containsKey(relicId)) {
+            return statsInfoHashMap.get(relicId).showStats();
+        } else {
+            return false;
+        }
     }
 
     public static boolean hasStatsMessage(String relicId) {
@@ -371,7 +376,7 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
         SlayTheRelicsIntegration.clear();
         if (CardCrawlGame.isInARun() && getTwitchIntegrationOption()) {
             for (AbstractRelic relic : AbstractDungeon.player.relics) {
-                if (statsInfoHashMap.containsKey(relic.relicId)) {
+                if (hasStats(relic.relicId)) {
                     Hitbox hb = relic.hb;
                     PowerTip tip = new PowerTip(statsHeader, getStatsDescription(relic.relicId));
                     ArrayList<PowerTip> tips = (ArrayList<PowerTip>)relic.tips.clone();

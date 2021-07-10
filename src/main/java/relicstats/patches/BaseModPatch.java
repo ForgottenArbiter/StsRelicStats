@@ -23,12 +23,21 @@ public class BaseModPatch {
         try {
             if (relicClass.isInstance(HasCustomStats.class)) {
                 RelicStats.registerCustomStats(relic.relicId, (HasCustomStats)relic);
+                return;
             }
             Method getStatsDescription = relicClass.getMethod("getStatsDescription");
             Method getExtendedStatsDescription = relicClass.getMethod("getExtendedStatsDescription", int.class, int.class);
             Method resetStats = relicClass.getMethod("resetStats");
             Method onSaveStats = relicClass.getMethod("onSaveStats");
             Method onLoadStats = relicClass.getMethod("onLoadStats", JsonElement.class);
+            Method showStats;
+            try {
+                showStats = relicClass.getMethod("showStats");
+            } catch (NoSuchMethodException e) {
+                showStats = null;
+            }
+            // Just redefining it as something final for the code below; there may be a better way.
+            final Method realShowStats = showStats;
             HasCustomStats customStats = new HasCustomStats() {
 
                 private void handleError(Exception e) {
@@ -82,6 +91,19 @@ public class BaseModPatch {
                         onLoadStats.invoke(relic, jsonElement);
                     } catch (IllegalAccessException | InvocationTargetException e) {
                         handleError(e);
+                    }
+                }
+
+                @Override
+                public boolean showStats() {
+                    if (realShowStats == null) {
+                        return true;
+                    }
+                    try {
+                        return (boolean) realShowStats.invoke(relic);
+                    } catch (IllegalAccessException | InvocationTargetException e) {
+                        handleError(e);
+                        return false;
                     }
                 }
             };
