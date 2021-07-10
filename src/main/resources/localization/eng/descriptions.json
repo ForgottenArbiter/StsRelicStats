@@ -556,5 +556,15 @@
     "TEXT": [
       "Card bottled: "
     ]
+  },
+  "STATS:Bottled Tornado": {
+    "TEXT": [
+      "Card bottled: "
+    ]
+  },
+  "STATS:Bottled Lightning": {
+    "TEXT": [
+      "Card bottled: "
+    ]
   }
 }
