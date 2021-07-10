@@ -541,5 +541,20 @@
     "TEXT": [
       "Charges used: "
     ]
+  },
+  "STATS:Omamori": {
+    "TEXT": [
+      "Charges used: "
+    ]
+  },
+  "STATS:Matryoshka": {
+    "TEXT": [
+      "Charges used: "
+    ]
+  },
+  "STATS:Bottled Flame": {
+    "TEXT": [
+      "Card bottled: "
+    ]
   }
 }
