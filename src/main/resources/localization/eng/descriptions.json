@@ -516,9 +516,20 @@
       "Time spent viewing draw order: "
     ]
   },
-  "STATS:Fossilized Helix": {
+  "STATS:FossilizedHelix": {
     "TEXT": [
-      "Damage blocked: "
+      "Damage prevented: "
+    ]
+  },
+  "STATS:Ancient Tea Set": {
+    "TEXT": [
+      "Energy gained: "
+    ]
+  },
+  "STATS:Membership Card": {
+    "TEXT": [
+      "Gold saved: ",
+      " NL (Includes the Courier and Membership Card)"
     ]
   }
 }

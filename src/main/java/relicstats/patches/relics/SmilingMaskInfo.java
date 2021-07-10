@@ -50,11 +50,11 @@ public class SmilingMaskInfo extends StatsInfo {
     @SpirePrefixPatch
     public static void patch() {
         float baseCost = (float)ShopScreen.purgeCost;
-        if (AbstractDungeon.player.hasRelic(Courier.ID)) {
-            baseCost *= 0.8;
-        }
         if (AbstractDungeon.player.hasRelic(MembershipCard.ID)) {
             baseCost *= 0.5;
+        } else if (AbstractDungeon.player.hasRelic(Courier.ID)) {
+            // This is else if because the base game is bugged so that only membership card applies when you own both
+            baseCost *= 0.8;
         }
         int discount = MathUtils.round(baseCost) - 50;
         if (AbstractDungeon.player.hasRelic(SmilingMask.ID)) {
