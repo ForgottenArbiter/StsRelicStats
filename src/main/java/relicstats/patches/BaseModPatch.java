@@ -7,6 +7,8 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.google.gson.JsonElement;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import relicstats.HasCustomStats;
 import relicstats.RelicStats;
 
@@ -14,6 +16,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class BaseModPatch {
+    private static final Logger logger = LogManager.getLogger(BaseModPatch.class.getName());
 
     public static void checkCustomRelic(AbstractRelic relic) {
         Class<?> relicClass = relic.getClass();
@@ -29,7 +32,7 @@ public class BaseModPatch {
             HasCustomStats customStats = new HasCustomStats() {
 
                 private void handleError(Exception e) {
-                    System.out.println("Custom stats for relic failed.");
+                    logger.error(String.format("Custom stats for relic %s failed.", relic.relicId));
                     e.printStackTrace();
                     RelicStats.unregisterCustomStats(relic.relicId);
                 }

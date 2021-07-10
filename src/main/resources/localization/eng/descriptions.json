@@ -510,5 +510,15 @@
     "TEXT": [
       "Cards drawn: "
     ]
+  },
+  "STATS:Frozen Eye": {
+    "TEXT": [
+      "Time spent viewing draw order: "
+    ]
+  },
+  "STATS:Fossilized Helix": {
+    "TEXT": [
+      "Damage blocked: "
+    ]
   }
 }

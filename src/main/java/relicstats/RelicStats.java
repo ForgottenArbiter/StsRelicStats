@@ -29,7 +29,8 @@ import java.util.HashMap;
 import java.util.Properties;
 
 @SpireInitializer
-public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, PostUpdateSubscriber, PostInitializeSubscriber, PreStartGameSubscriber, EditStringsSubscriber, OnStartBattleSubscriber, CustomSavableRaw {
+public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, PostUpdateSubscriber, PostInitializeSubscriber,
+        PreStartGameSubscriber, EditStringsSubscriber, OnStartBattleSubscriber, CustomSavableRaw {
 
     private static final Logger logger = LogManager.getLogger(RelicStats.class.getName());
     private static HashMap<String, HasCustomStats> statsInfoHashMap = new HashMap<>();
@@ -174,9 +175,13 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
         registerCustomStats(BagOfPreparation.ID, BagOfPreparationInfo.getInstance());
         registerCustomStats(GamblingChip.ID, GamblingChipInfo.getInstance());
         registerCustomStats(SnakeRing.ID, SnakeRingInfo.getInstance());
+        registerCustomStats(FossilizedHelix.ID, FossilizedHelixInfo.getInstance());
 
-        System.out.println("Custom stat relics: ");
-        System.out.println(Arrays.toString(statsInfoHashMap.keySet().toArray()));
+        // Joke relic stats
+        registerCustomStats(FrozenEye.ID, new FrozenEyeInfo());
+
+        logger.info("Custom stat relics: ");
+        logger.info(Arrays.toString(statsInfoHashMap.keySet().toArray()));
 
         BaseMod.addSaveField("stats_master_turn_counts", this);
         BaseMod.addSaveField("relic_floor_stats", new RelicObtainStats());
