@@ -554,17 +554,28 @@
   },
   "STATS:Bottled Flame": {
     "TEXT": [
-      "Card bottled: "
+      "Card bottled: ",
+      "Unknown"
     ]
   },
   "STATS:Bottled Tornado": {
     "TEXT": [
-      "Card bottled: "
+      "Card bottled: ",
+      "Unknown"
     ]
   },
   "STATS:Bottled Lightning": {
     "TEXT": [
-      "Card bottled: "
+      "Card bottled: ",
+      "Unknown"
+    ]
+  },
+  "STATS:Nilry's Codex": {
+    "TEXT": [
+      "Common cards picked: ",
+      " NL Uncommon cards picked: ",
+      " NL Rare cards picked: ",
+      " NL Cards skipped: "
     ]
   }
 }
