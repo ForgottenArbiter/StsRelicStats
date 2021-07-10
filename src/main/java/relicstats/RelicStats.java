@@ -180,6 +180,7 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
         registerCustomStats(MembershipCard.ID, new MembershipCardInfo());
         registerCustomStats(Courier.ID, new MembershipCardInfo());
         registerCustomStats(Girya.ID, new GiryaInfo());
+        registerCustomStats(WingBoots.ID, new WingBootsInfo());
 
         // Joke relic stats
         registerCustomStats(FrozenEye.ID, new FrozenEyeInfo());

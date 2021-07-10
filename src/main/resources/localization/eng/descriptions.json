@@ -536,5 +536,10 @@
     "TEXT": [
       "Times lifted: "
     ]
+  },
+  "STATS:WingedGreaves": {
+    "TEXT": [
+      "Charges used: "
+    ]
   }
 }
