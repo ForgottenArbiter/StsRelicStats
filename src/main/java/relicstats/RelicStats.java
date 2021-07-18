@@ -187,6 +187,7 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
         registerCustomStats(BottledLightning.ID, new BottledLightningInfo());
         registerCustomStats(BottledTornado.ID, new BottledTornadoInfo());
         registerCustomStats(NilrysCodex.ID, new NilrysCodexInfo());
+        registerCustomStats(Cauldron.ID, new CauldronInfo());
 
         // Joke relic stats
         registerCustomStats(FrozenEye.ID, new FrozenEyeInfo());

@@ -66,7 +66,7 @@ public class BottledLightningInfo extends StatsInfo {
     @Override
     public void onLoadRaw(JsonElement jsonElement) {
         if (jsonElement != null) {
-            String card = jsonElement.getAsString();
+            card = jsonElement.getAsString();
         } else {
             resetStats();
         }
