@@ -6,9 +6,11 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.ConfusionPower;
+import com.megacrit.cardcrawl.powers.CorruptionPower;
 import com.megacrit.cardcrawl.relics.SneckoEye;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
@@ -24,7 +26,7 @@ import java.util.Arrays;
 )
 public class SneckoInfo extends StatsInfo {
 
-    private static int[] costs = new int[5];
+    private static int[] costs = new int[4];
     private static String statId = getLocId(SneckoEye.ID);
     private static String[] description = CardCrawlGame.languagePack.getUIString(statId).TEXT;
 
@@ -32,22 +34,15 @@ public class SneckoInfo extends StatsInfo {
 
     public String getStatsDescription() {
         StringBuilder toDisplay = new StringBuilder();
-        int totalCards = 0;
         for(int i = 0; i < 4; i++) {
             toDisplay.append(description[i]);
             toDisplay.append(costs[i]);
-            totalCards += costs[i];
         }
-        if (totalCards == 0) {
-            totalCards = 1;
-        }
-        toDisplay.append(description[4]);
-        toDisplay.append(new DecimalFormat("#.###").format((float) (costs[4]) / totalCards));
         return toDisplay.toString();
     }
 
     public void resetStats() {
-        costs = new int[5];
+        costs = new int[4];
     }
 
     @Override
@@ -60,7 +55,7 @@ public class SneckoInfo extends StatsInfo {
     public void onLoadRaw(JsonElement jsonElement) {
         if (jsonElement != null) {
             JsonArray array = jsonElement.getAsJsonArray();
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 4; i++) {
                 if (i >= array.size()) {
                     costs[i] = 0;
                 } else {
@@ -78,8 +73,9 @@ public class SneckoInfo extends StatsInfo {
     )
     public static void patch(ConfusionPower _instance, AbstractCard c, int newCost) {
         if (AbstractDungeon.player.hasRelic(SneckoEye.ID) && newCost >= 0 && newCost <= 3) {
-            costs[newCost] += 1;
-            costs[4] += (c.cost - newCost);
+            if (c.type != AbstractCard.CardType.SKILL || !AbstractDungeon.player.hasPower(CorruptionPower.POWER_ID)) {
+                costs[newCost] += 1;
+            }
         }
     }
 
