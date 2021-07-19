@@ -191,6 +191,8 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
         registerCustomStats(HolyWater.ID, HolyWaterInfo.getInstance());
         registerCustomStats(PureWater.ID, PureWaterInfo.getInstance());
         registerCustomStats(WhiteBeast.ID, new WhiteBeastStatueInfo());
+        registerCustomStats(Calipers.ID, CalipersInfo.getInstance());
+        registerCustomStats(IceCream.ID, IceCreamInfo.getInstance());
 
         // Joke relic stats
         registerCustomStats(FrozenEye.ID, new FrozenEyeInfo());

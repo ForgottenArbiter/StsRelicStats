@@ -597,5 +597,15 @@
     "TEXT": [
       "Expected extra potions: "
     ]
+  },
+  "STATS:Calipers": {
+    "TEXT": [
+      "Block retained: "
+    ]
+  },
+  "STATS:Ice Cream": {
+    "TEXT": [
+      "Energy retained: "
+    ]
   }
 }
