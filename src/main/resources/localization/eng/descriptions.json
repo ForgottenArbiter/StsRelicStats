@@ -592,5 +592,10 @@
     "TEXT": [
       "Energy gained: "
     ]
+  },
+  "STATS:White Beast Statue": {
+    "TEXT": [
+      "Expected extra potions: "
+    ]
   }
 }
