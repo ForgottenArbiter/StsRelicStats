@@ -31,7 +31,7 @@ public class StatsSaver {
     public static JsonElement saveRelics() {
         HashMap<String, JsonElement> savedata = new HashMap<>();
         for (AbstractRelic relic: AbstractDungeon.player.relics) {
-            if (RelicStats.hasStats(relic.relicId)) {
+            if (RelicStats.hasStats(relic.relicId, true)) {
                 savedata.put(relic.relicId, RelicStats.getCustomStats(relic.relicId).onSaveRaw());
             }
         }

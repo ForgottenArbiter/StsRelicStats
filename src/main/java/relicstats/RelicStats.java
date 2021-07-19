@@ -313,12 +313,21 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
         }
     }
 
-    public static boolean hasStats(String relicId) {
+    public static boolean hasStats(String relicId, boolean ignoreShowStatsPreferences) {
         if (statsInfoHashMap.containsKey(relicId)) {
-            return statsInfoHashMap.get(relicId).showStats();
+            if (ignoreShowStatsPreferences) {
+                return statsInfoHashMap.containsKey(relicId);
+            } else {
+                return statsInfoHashMap.get(relicId).showStats();
+            }
         } else {
             return false;
         }
+
+    }
+
+    public static boolean hasStats(String relicId) {
+        return hasStats(relicId, false);
     }
 
     public static boolean hasStatsMessage(String relicId) {
