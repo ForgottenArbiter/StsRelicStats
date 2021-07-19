@@ -2,20 +2,15 @@ package relicstats.patches.relics;
 
 import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.FrozenEye;
 import com.megacrit.cardcrawl.screens.DrawPileViewScreen;
 import com.megacrit.cardcrawl.screens.stats.CharStat;
-import javassist.CannotCompileException;
-import javassist.CtBehavior;
+import relicstats.RelicStats;
 import relicstats.StatsInfo;
-
-import java.util.ArrayList;
 
 @SpirePatch(
         clz = DrawPileViewScreen.class,
@@ -57,6 +52,11 @@ public class FrozenEyeInfo extends StatsInfo {
         if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic(FrozenEye.ID)) {
             time += Gdx.graphics.getDeltaTime();
         }
+    }
+
+    @Override
+    public boolean showStats() {
+        return RelicStats.getJokeStatsOtion();
     }
 
 }

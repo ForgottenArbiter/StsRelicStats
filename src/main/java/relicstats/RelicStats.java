@@ -44,6 +44,7 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
     private static String EXTENDED_STATS_OPTION = "extendedStats";
     private static String TWITCH_OPTION = "slayTheRelics";
     private static String FLOOR_STATS_OPTION = "floorStats";
+    private static String JOKE_STATS_OPTION = "jokeStats";
     private static SpireConfig statsConfig;
 
     public static RelicStats mod;
@@ -56,6 +57,7 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
             defaults.put(EXTENDED_STATS_OPTION, Boolean.toString(true));
             defaults.put(TWITCH_OPTION, Boolean.toString(false));
             defaults.put(FLOOR_STATS_OPTION, Boolean.toString(false));
+            defaults.put(JOKE_STATS_OPTION, Boolean.toString(false));
             statsConfig = new SpireConfig("Relic Stats", "config", defaults);
             statsConfig.save();
         } catch (IOException e) {
@@ -235,6 +237,13 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
         return statsConfig.getBool(FLOOR_STATS_OPTION);
     }
 
+    public static boolean getJokeStatsOtion() {
+        if (statsConfig == null) {
+            return false;
+        }
+        return statsConfig.getBool(JOKE_STATS_OPTION);
+    }
+
     public void receiveRelicGet(AbstractRelic relic) {
         RelicObtainStats.obtainRelic(relic.relicId, AbstractDungeon.floorNum, battleCount, turnCount);
     }
@@ -286,6 +295,21 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
                     }
                 });
         settingsPanel.addUIElement(floorStatsButton);
+        ModLabeledToggleButton jokeStatsButton = new ModLabeledToggleButton(
+                CardCrawlGame.languagePack.getUIString("STATS:OPTION").TEXT[3],
+                350, 545, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                getFloorStatsOtion(), settingsPanel, modLabel -> {},
+                modToggleButton -> {
+                    if (statsConfig != null) {
+                        statsConfig.setBool(JOKE_STATS_OPTION, modToggleButton.enabled);
+                        try {
+                            statsConfig.save();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+        settingsPanel.addUIElement(jokeStatsButton);
         BaseMod.registerModBadge(ImageMaster.loadImage("Icon.png"),"Relic Stats", "Forgotten Arbiter", null, settingsPanel);
     }
 

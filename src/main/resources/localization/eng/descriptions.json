@@ -15,7 +15,8 @@
     "TEXT": [
       "Enable per combat and per turn stat reporting for combat relics",
       "Enable integration with the Slay the Relics mod",
-      "Display floor obtained for all relics"
+      "Display floor obtained for all relics",
+      "Display joke stats"
     ]
   },
   "STATS:ERROR": {
