@@ -582,5 +582,15 @@
     "TEXT": [
       "Potions picked up: "
     ]
+  },
+  "STATS:HolyWater": {
+    "TEXT": [
+      "Energy gained: "
+    ]
+  },
+  "STATS:PureWater": {
+    "TEXT": [
+      "Energy gained: "
+    ]
   }
 }
