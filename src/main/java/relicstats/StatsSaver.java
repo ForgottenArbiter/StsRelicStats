@@ -13,7 +13,9 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 @SpirePatch(
         clz = Metrics.class,
@@ -24,6 +26,7 @@ public class StatsSaver {
     public static final String RELIC_JSON_KEY = "relic_stats";
     public static final String COUNTERS_JSON_KEY = "counters";
     public static final String OBTAIN_JSON_KEY = "obtain_stats";
+    public static Set<String> loadedRelics = new HashSet<>();
 
     public static JsonElement saveRelics() {
         HashMap<String, JsonElement> savedata = new HashMap<>();
@@ -38,6 +41,7 @@ public class StatsSaver {
     }
 
     public static void loadRelics(JsonElement jsonElement) {
+        loadedRelics = new HashSet<>();
         JsonObject relicMap = jsonElement.getAsJsonObject();
         for (Map.Entry<String, JsonElement> entry : relicMap.entrySet()) {
             if (entry.getKey().equals(COUNTERS_JSON_KEY)) {
@@ -46,6 +50,7 @@ public class StatsSaver {
                 new RelicObtainStats().onLoadRaw(entry.getValue());
             } else if (RelicStats.hasStats(entry.getKey())){
                 RelicStats.getCustomStats(entry.getKey()).onLoadRaw(entry.getValue());
+                loadedRelics.add(entry.getKey());
             }
         }
     }

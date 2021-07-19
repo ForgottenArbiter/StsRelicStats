@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import relicstats.patches.relics.*;
@@ -35,6 +36,7 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
     private static final Logger logger = LogManager.getLogger(RelicStats.class.getName());
     private static HashMap<String, HasCustomStats> statsInfoHashMap = new HashMap<>();
     private static String floorObtainedString;
+    private static String unknownStatsString;
     public static String statsHeader;
     public static int turnCount;
     public static int battleCount;
@@ -79,6 +81,7 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
     public void receivePostInitialize() {
         statsHeader = CardCrawlGame.languagePack.getUIString("STATS:HEADER").TEXT[0];
         floorObtainedString = CardCrawlGame.languagePack.getUIString("STATS:EXTENDED").TEXT[2];
+        unknownStatsString = CardCrawlGame.languagePack.getUIString("STATS:ERROR").TEXT[0];
         registerCustomStats(SneckoEye.ID, new SneckoInfo());
         registerCustomStats(CeramicFish.ID, new CeramicFishInfo());
         registerCustomStats(MawBank.ID, new MawBankInfo());
@@ -355,6 +358,18 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
         }
     }
 
+    public static String getUnknownStatsDescription(String relicId) {
+        String prefix = "";
+        if (getFloorStatsOtion()) {
+            prefix = getFloorObtainedDescription(relicId);
+        }
+        if (!hasStats(relicId)) {
+            return prefix;
+        } else {
+            return prefix + unknownStatsString;
+        }
+    }
+
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         battleCount += 1;
@@ -398,6 +413,10 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
                 }
             }
         }
+    }
+
+    public static boolean isInRunHistory() {
+        return CardCrawlGame.mode == CardCrawlGame.GameMode.CHAR_SELECT && CardCrawlGame.mainMenuScreen.screen == MainMenuScreen.CurScreen.RUN_HISTORY;
     }
 
 }

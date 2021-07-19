@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.screens.DeathScreen;
 import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import relicstats.RelicStats;
+import relicstats.StatsSaver;
 
 import java.util.ArrayList;
 
@@ -23,7 +24,7 @@ public class AbstractRelicPatch {
     private static ArrayList<PowerTip> originalTips;
 
     public static boolean shouldShowStats() {
-        if (CardCrawlGame.mode == CardCrawlGame.GameMode.CHAR_SELECT && CardCrawlGame.mainMenuScreen.screen == MainMenuScreen.CurScreen.RUN_HISTORY) {
+        if (RelicStats.isInRunHistory()) {
             return RunHistoryScreenPatch.runHistoryHasStats;
         }
         return CardCrawlGame.mode == CardCrawlGame.GameMode.GAMEPLAY && AbstractDungeon.player != null;
@@ -35,7 +36,11 @@ public class AbstractRelicPatch {
             addedTip = true;
             originalTips = _instance.tips;
             _instance.tips = (ArrayList<PowerTip>)_instance.tips.clone();
-            _instance.tips.add(new PowerTip(RelicStats.statsHeader, RelicStats.getStatsDescription(_instance.relicId)));
+            if (RelicStats.isInRunHistory() && !StatsSaver.loadedRelics.contains(_instance.relicId)) {
+                _instance.tips.add(new PowerTip(RelicStats.statsHeader, RelicStats.getUnknownStatsDescription(_instance.relicId)));
+            } else {
+                _instance.tips.add(new PowerTip(RelicStats.statsHeader, RelicStats.getStatsDescription(_instance.relicId)));
+            }
         }
     }
 

@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import relicstats.RelicStats;
+import relicstats.StatsSaver;
 
 import java.util.ArrayList;
 
@@ -25,7 +26,7 @@ public class SingleRelicViewPopupPatch {
     static String statsHeader = null;
 
     public static boolean shouldShowStats() {
-        if (CardCrawlGame.mode == CardCrawlGame.GameMode.CHAR_SELECT && CardCrawlGame.mainMenuScreen.screen == MainMenuScreen.CurScreen.RUN_HISTORY) {
+        if (RelicStats.isInRunHistory()) {
             return RunHistoryScreenPatch.runHistoryHasStats;
         }
         return CardCrawlGame.mode == CardCrawlGame.GameMode.GAMEPLAY && AbstractDungeon.player != null;
@@ -38,7 +39,11 @@ public class SingleRelicViewPopupPatch {
     public static void patch(SingleRelicViewPopup _instance, SpriteBatch sb, ArrayList<PowerTip> t) {
         AbstractRelic relic = (AbstractRelic)ReflectionHacks.getPrivate(_instance, SingleRelicViewPopup.class, "relic");
         if (RelicStats.hasStatsMessage(relic.relicId) && shouldShowStats()) {
-            t.add(new PowerTip(RelicStats.statsHeader, RelicStats.getStatsDescription(relic.relicId)));
+            if (RelicStats.isInRunHistory() && !StatsSaver.loadedRelics.contains(relic.relicId)) {
+                t.add(new PowerTip(RelicStats.statsHeader, RelicStats.getUnknownStatsDescription(relic.relicId)));
+            } else {
+                t.add(new PowerTip(RelicStats.statsHeader, RelicStats.getStatsDescription(relic.relicId)));
+            }
         }
     }
 

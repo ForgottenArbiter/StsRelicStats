@@ -18,6 +18,11 @@
       "Display floor obtained for all relics"
     ]
   },
+  "STATS:ERROR": {
+    "TEXT": [
+      "Stats unknown"
+    ]
+  },
   "STATS:Snecko Eye": {
     "TEXT": [
       "Card cost counts: NL 0 energy: ",
