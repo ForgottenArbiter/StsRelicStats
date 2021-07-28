@@ -408,6 +408,7 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         battleCount += 1;
         SelfFormingClayInfo.getInstance().onCombatStart();
+        SneckoInfo.onBattleStart();
     }
 
 
