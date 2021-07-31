@@ -15,7 +15,13 @@
     "TEXT": [
       "开启每回合和每场战斗开始时的战斗遗物报告",
       "与Slay the Relics集成",
-      "显示遗物获得楼层数"
+      "显示遗物获得楼层数",
+      "显示娱乐统计"
+    ]
+  },
+  "STATS:ERROR": {
+    "TEXT": [
+      "统计内容未知"
     ]
   },
   "STATS:Snecko Eye": {
@@ -23,37 +29,38 @@
       "卡牌耗能计数: NL 0 费： ",
       " NL 1 费： ",
       " NL 2 费： ",
-      " NL 3 费： "
+      " NL 3 费： ",
+      " NL 平均费用: "
     ]
   },
   "STATS:CeramicFish": {
     "TEXT": [
-      "金币获得： "
+      "获得金币： "
     ]
   },
   "STATS:MawBank": {
     "TEXT": [
-      "金币获得： "
+      "获得金币： "
     ]
   },
   "STATS:Toy Ornithopter": {
     "TEXT": [
-      "回血： "
+      "回血量： "
     ]
   },
   "STATS:Burning Blood": {
     "TEXT": [
-      "回血： "
+      "回血量： "
     ]
   },
   "STATS:Eternal Feather": {
     "TEXT": [
-      "回血： "
+      "回血量： "
     ]
   },
   "STATS:MealTicket": {
     "TEXT": [
-      "回血： "
+      "回血量： "
     ]
   },
   "STATS:SsserpentHead": {
@@ -63,27 +70,27 @@
   },
   "STATS:Golden Idol": {
     "TEXT": [
-      "额外获得金币： "
+      "额外掉落金币： "
     ]
   },
   "STATS:Bloody Idol": {
     "TEXT": [
-      "回血： "
+      "回血量： "
     ]
   },
   "STATS:FaceOfCleric": {
     "TEXT": [
-      "获得最大生命： "
+      "获得最大生命量： "
     ]
   },
   "STATS:Black Star": {
     "TEXT": [
-      "额外遗物数： "
+      "额外获得遗物数： "
     ]
   },
   "STATS:Blood Vial": {
     "TEXT": [
-      "回血： "
+      "回血量： "
     ]
   },
   "STATS:Juzu Bracelet": {
@@ -93,335 +100,335 @@
   },
   "STATS:Ectoplasm": {
     "TEXT": [
-      "失去金币： "
+      "失去金币数： "
     ]
   },
   "STATS:Sozu": {
     "TEXT": [
-      "失去药水： "
+      "失去药水数： "
     ]
   },
   "STATS:Boot": {
     "TEXT": [
-      "增加伤害： "
+      "增加伤害量： "
     ]
   },
   "STATS:PreservedInsect": {
     "TEXT": [
-      "减少血量： "
+      "减少精英血量： "
     ]
   },
   "STATS:Meat on the Bone": {
     "TEXT": [
-      "回血： "
+      "回血量： "
     ]
   },
   "STATS:Pantograph": {
     "TEXT": [
-      "回血： "
+      "回血量： "
     ]
   },
   "STATS:Torii": {
     "TEXT": [
-      "阻止伤害： "
+      "阻止伤害量： "
     ]
   },
   "STATS:TungstenRod": {
     "TEXT": [
-      "阻止伤害： "
+      "阻止伤害量： "
     ]
   },
   "STATS:Mercury Hourglass": {
     "TEXT": [
-      "造成伤害： "
+      "造成伤害量： "
     ]
   },
   "STATS:StoneCalendar": {
     "TEXT": [
-      "造成伤害： "
+      "造成伤害量： "
     ]
   },
   "STATS:Darkstone Periapt": {
     "TEXT": [
-      "获得最大生命： "
+      "获得最大生命量： "
     ]
   },
   "STATS:Singing Bowl": {
     "TEXT": [
-      "获得最大生命： "
+      "获得最大生命量： "
     ]
   },
   "STATS:Shuriken": {
     "TEXT": [
-      "获得力量： "
+      "获得力量数： "
     ]
   },
   "STATS:Kunai": {
     "TEXT": [
-      "获得敏捷： "
+      "获得敏捷数： "
     ]
   },
   "STATS:Ornamental Fan": {
     "TEXT": [
-      "获得格挡： "
+      "获得格挡量： "
     ]
   },
   "STATS:Mark of the Bloom": {
     "TEXT": [
-      "阻止回复： "
+      "阻止回血量： "
     ]
   },
   "STATS:Art of War": {
     "TEXT": [
-      "获得能量： "
+      "获得能量数： "
     ]
   },
   "STATS:Nunchaku": {
     "TEXT": [
-      "获得能量： "
+      "获得能量数： "
     ]
   },
   "STATS:Snake Skull": {
     "TEXT": [
-      "给予中毒： "
+      "给予中毒量： "
     ]
   },
   "STATS:Letter Opener": {
     "TEXT": [
-      "造成伤害： "
+      "造成伤害量： "
     ]
   },
   "STATS:Sundial": {
     "TEXT": [
-      "获得能量："
+      "获得能量数："
     ]
   },
   "STATS:Charon's Ashes": {
     "TEXT": [
-      "造成伤害： "
+      "造成伤害量： "
     ]
   },
   "STATS:CloakClasp": {
     "TEXT": [
-      "获得格挡： "
+      "获得格挡量： "
     ]
   },
   "STATS:Pocketwatch": {
     "TEXT": [
-      "抽牌： "
+      "抽牌数： "
     ]
   },
   "STATS:Tingsha": {
     "TEXT": [
-      "造成伤害： "
+      "造成伤害量： "
     ]
   },
   "STATS:Tough Bandages": {
     "TEXT": [
-      "获得格挡： "
+      "获得格挡量： "
     ]
   },
   "STATS:VioletLotus": {
     "TEXT": [
-      "获得能量： "
+      "获得能量数： "
     ]
   },
   "STATS:TheAbacus": {
     "TEXT": [
-      "获得格挡： "
+      "获得格挡量： "
     ]
   },
   "STATS:Dead Branch": {
     "TEXT": [
-      "卡牌生成 "
+      "卡牌生成数： "
     ]
   },
   "STATS:Unceasing Top": {
     "TEXT": [
-      "抽牌： "
+      "抽牌数： "
     ]
   },
   "STATS:FrozenCore": {
     "TEXT": [
-      "生成冰球： "
+      "生成冰球数： "
     ]
   },
   "STATS:HoveringKite": {
     "TEXT": [
-      "能量获得： "
+      "能量获得数： "
     ]
   },
   "STATS:Runic Cube": {
     "TEXT": [
-      "抽牌： "
+      "抽牌数： "
     ]
   },
   "STATS:Strange Spoon": {
     "TEXT": [
-      "卡牌循环： "
+      "卡牌循环数： "
     ]
   },
   "STATS:Nloth's Gift": {
     "TEXT": [
-      "额外稀有牌： "
+      "额外稀有牌数： "
     ]
   },
   "STATS:Self Forming Clay": {
     "TEXT": [
-      "获得格挡： "
+      "获得格挡量： "
     ]
   },
   "STATS:Necronomicon": {
     "TEXT": [
-      "双发攻击牌： "
+      "双发攻击牌数： "
     ]
   },
   "STATS:Medical Kit": {
     "TEXT": [
-      "消耗状态： "
+      "消耗状态牌数： "
     ]
   },
   "STATS:Blue Candle": {
     "TEXT": [
-      "消耗诅咒： "
+      "消耗诅咒牌数： "
     ]
   },
   "STATS:Orichalcum": {
     "TEXT": [
-      "获得格挡： "
+      "获得格挡量： "
     ]
   },
   "STATS:Pen Nib": {
     "TEXT": [
-      "伤害加倍： "
+      "伤害翻倍量： "
     ]
   },
   "STATS:Smiling Mask": {
     "TEXT": [
-      "省钱： "
+      "省钱数： "
     ]
   },
   "STATS:Gremlin Horn": {
     "TEXT": [
       "抽牌： ",
-      " NL 能量获得： ",
-      " NL 每场战斗抽牌： ",
-      " NL 每场战斗能量获得: "
+      " NL 能量获得数： ",
+      " NL 每场战斗抽牌数： ",
+      " NL 每场战斗能量获得数: "
     ]
   },
   "STATS:InkBottle": {
     "TEXT": [
-      "抽牌： "
+      "抽牌数： "
     ]
   },
   "STATS:Bird Faced Urn": {
     "TEXT": [
-      "回血： "
+      "回血量： "
     ]
   },
   "STATS:Champion Belt": {
     "TEXT": [
-      "给予虚弱： "
+      "给予虚弱层数： "
     ]
   },
   "STATS:Ginger": {
     "TEXT": [
-      "免疫虚弱： "
+      "免疫虚弱层数： "
     ]
   },
   "STATS:Turnip": {
     "TEXT": [
-      "免疫脆弱： "
+      "免疫脆弱层数： "
     ]
   },
   "STATS:Prayer Wheel": {
     "TEXT": [
-      "额外卡牌奖励： "
+      "额外卡牌奖励数： "
     ]
   },
   "STATS:Inserter": {
     "TEXT": [
-      "栏位生成： "
+      "栏位生成数： "
     ]
   },
   "STATS:HandDrill": {
     "TEXT": [
-      "给予易伤： "
+      "给予易伤层数： "
     ]
   },
   "STATS:OrangePellets": {
     "TEXT": [
-      "Debuff清除： "
+      "负面效果清除数： "
     ]
   },
   "STATS:WarpedTongs": {
     "TEXT": [
-      "卡牌升级： "
+      "卡牌升级数： "
     ]
   },
   "STATS:Shovel": {
     "TEXT": [
-      "挖掘遗物: "
+      "挖掘遗物数: "
     ]
   },
   "STATS:Centennial Puzzle": {
     "TEXT": [
-      "抽牌： "
+      "抽牌数： "
     ]
   },
   "STATS:Happy Flower": {
     "TEXT": [
-      "获得能量： "
+      "获得能量数： "
     ]
   },
   "STATS:Dream Catcher": {
     "TEXT": [
-      "额外卡牌奖励： "
+      "额外卡牌奖励数： "
     ]
   },
   "STATS:Peace Pipe": {
     "TEXT": [
-      "抽掉卡牌： "
+      "移除牌数： "
     ]
   },
   "STATS:Lizard Tail": {
     "TEXT": [
-      "回血： "
+      "回血量： "
     ]
   },
   "STATS:Question Card": {
     "TEXT": [
-      "额外卡牌奖励： "
+      "额外卡牌奖励数： "
     ]
   },
   "STATS:Tiny Chest": {
     "TEXT": [
-      "生成宝箱： "
+      "生成宝箱数： "
     ]
   },
   "STATS:Busted Crown": {
     "TEXT": [
-      "失去卡牌奖励： "
+      "失去卡牌奖励数： "
     ]
   },
   "STATS:Cursed Key": {
     "TEXT": [
-      "生成诅咒： "
+      "生成诅咒牌数： "
     ]
   },
   "STATS:Chemical X": {
     "TEXT": [
-      "打出X费牌： "
+      "打出X费牌数： "
     ]
   },
   "STATS:Yang": {
     "TEXT": [
-      "生成临时敏捷： "
+      "生成临时敏捷层数： "
     ]
   },
   "STATS:Cables": {
     "TEXT": [
-      "充能球被动： ",
+      "充能球被动触发数： ",
       " NL 电球： ",
       " NL 冰球： ",
       " NL 黑球： ",
@@ -430,7 +437,7 @@
   },
   "STATS:Emotion Chip": {
     "TEXT": [
-      "充能球被动： ",
+      "充能球被动触发数： ",
       " NL 电球： ",
       " NL 冰球： ",
       " NL 黑球： ",
@@ -439,76 +446,178 @@
   },
   "STATS:Melange": {
     "TEXT": [
-      "预见卡牌： "
+      "预见卡牌数： "
     ]
   },
   "STATS:GoldenEye": {
     "TEXT": [
-      "额外预见卡牌： "
+      "额外预见卡牌数： "
     ]
   },
   "STATS:Regal Pillow": {
     "TEXT": [
-      "回血： "
+      "回血量： "
     ]
   },
   "STATS:Lee's Waffle": {
     "TEXT": [
-      "回血： "
+      "回血量： "
     ]
   },
   "STATS:Mummified Hand": {
     "TEXT": [
-      "减少费用： "
+      "减少耗能量： "
     ]
   },
   "STATS:Magic Flower": {
     "TEXT": [
-      "回血： "
+      "回血量： "
     ]
   },
   "STATS:Bronze Scales": {
     "TEXT": [
-      "造成伤害： "
+      "造成伤害量： "
     ]
   },
   "STATS:Pandora's Box": {
     "TEXT": [
-      "卡牌生成： ",
+      "卡牌生成数： ",
       "未知"
     ]
   },
   "STATS:Astrolabe": {
     "TEXT": [
-      "卡牌生成： ",
+      "卡牌生成数： ",
       "未知"
     ]
   },
   "STATS:Whetstone": {
     "TEXT": [
-      "卡牌升级： ",
+      "卡牌升级数： ",
       "未知"
     ]
   },
   "STATS:War Paint": {
     "TEXT": [
-      "卡牌升级： ",
+      "卡牌升级数： ",
       "未知"
     ]
   },
   "STATS:Bag of Preparation": {
     "TEXT": [
-      "抽牌： "
+      "抽牌数： "
     ]
   },
   "STATS:Gambling Chip": {
     "TEXT": [
-      "抽牌： "
+      "抽牌数： "
     ]
   },
   "STATS:Ring of the Snake": {
     "TEXT": [
-      "抽牌： "
+      "抽牌数： "
+    ]
+  },
+  "STATS:Frozen Eye": {
+    "TEXT": [
+      "查看抽牌堆次数: "
+    ]
+  },
+  "STATS:FossilizedHelix": {
+    "TEXT": [
+      "阻止伤害量： "
+    ]
+  },
+  "STATS:Ancient Tea Set": {
+    "TEXT": [
+      "能量获得数： "
+    ]
+  },
+  "STATS:Membership Card": {
+    "TEXT": [
+      "省钱数： ",
+      " NL （包括送货员和会员卡）"
+    ]
+  },
+  "STATS:Girya": {
+    "TEXT": [
+      "举重数： "
+    ]
+  },
+  "STATS:WingedGreaves": {
+    "TEXT": [
+      "飞跃次数： "
+    ]
+  },
+  "STATS:Omamori": {
+    "TEXT": [
+      "阻止诅咒牌数： "
+    ]
+  },
+  "STATS:Matryoshka": {
+    "TEXT": [
+      "充能使用数： "
+    ]
+  },
+  "STATS:Bottled Flame": {
+    "TEXT": [
+      "瓶装卡牌数： ",
+      "未知"
+    ]
+  },
+  "STATS:Bottled Tornado": {
+    "TEXT": [
+      "瓶装卡牌数： ",
+      "未知"
+    ]
+  },
+  "STATS:Bottled Lightning": {
+    "TEXT": [
+      "瓶装卡牌数： ",
+      "未知"
+    ]
+  },
+  "STATS:Nilry's Codex": {
+    "TEXT": [
+      "获取普通牌数： ",
+      " NL 获取罕见牌数： ",
+      " NL 获取稀有牌数： ",
+      " NL 卡牌跳过次数： "
+    ]
+  },
+  "STATS:Cauldron": {
+    "TEXT": [
+      "获得药水数： "
+    ]
+  },
+  "STATS:HolyWater": {
+    "TEXT": [
+      "能量获得数： "
+    ]
+  },
+  "STATS:PureWater": {
+    "TEXT": [
+      "能量获得数： "
+    ]
+  },
+  "STATS:White Beast Statue": {
+    "TEXT": [
+      "额外获得药水数： "
+    ]
+  },
+  "STATS:Calipers": {
+    "TEXT": [
+      "格挡保留量： "
+    ]
+  },
+  "STATS:Ice Cream": {
+    "TEXT": [
+      "能量保留量： "
+    ]
+  },
+  "STATS:The Specimen": {
+    "TEXT": [
+      "转移中毒量： "
     ]
   }
 }
