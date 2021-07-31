@@ -48,7 +48,7 @@ public class BlackStarInfo extends StatsInfo {
 
     @SpirePrefixPatch
     public static void prefix(BlackStar _instance) {
-        if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomElite) {
+        if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomElite && !AbstractDungeon.getCurrRoom().smoked) {
             relics += 1;
         }
     }
