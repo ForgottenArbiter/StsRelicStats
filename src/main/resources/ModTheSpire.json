@@ -5,7 +5,7 @@
   "description": "${project.description}",
   "version": "${project.version}",
   "sts_version": "${SlayTheSpire.version}",
-  "credits": "ZHS translation: Rita",
+  "credits": "ZHS translation: Rita \n FRA translation: Lucky_Lunge",
   "mts_version": "${ModTheSpire.version}",
   "dependencies": ["basemod"]
 }
