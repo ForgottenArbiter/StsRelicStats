@@ -1,0 +1,623 @@
+{
+  "STATS:HEADER": {
+    "TEXT": [
+      "Stats"
+    ]
+  },
+  "STATS:EXTENDED": {
+    "TEXT": [
+      " NL Par tour: ",
+      " NL Par combat: ",
+      "Étage obtenu: "
+    ]
+  },
+  "STATS:OPTION": {
+    "TEXT": [
+      "Active les stats par combat et par tour pour les reliques de combat",
+      "Active l'intégration avec le mod Slay the Relics",
+      "Affiche l'étage obtenu pour toutes les reliques",
+      "Affiche des stats humoristiques"
+    ]
+  },
+  "STATS:ERROR": {
+    "TEXT": [
+      "Stats inconnues"
+    ]
+  },
+  "STATS:Snecko Eye": {
+    "TEXT": [
+      "Compte des coûts de carte: NL 0 énergie: ",
+      " NL 1 énergie: ",
+      " NL 2 énergies: ",
+      " NL 3 énergies: ",
+      " NL Réduction moyenne: "
+    ]
+  },
+  "STATS:CeramicFish": {
+    "TEXT": [
+      "Or gagné: "
+    ]
+  },
+  "STATS:MawBank": {
+    "TEXT": [
+      "Or gagné: "
+    ]
+  },
+  "STATS:Toy Ornithopter": {
+    "TEXT": [
+      "PV soignés: "
+    ]
+  },
+  "STATS:Burning Blood": {
+    "TEXT": [
+      "PV soignés: "
+    ]
+  },
+  "STATS:Eternal Feather": {
+    "TEXT": [
+      "PV soignés: "
+    ]
+  },
+  "STATS:MealTicket": {
+    "TEXT": [
+      "PV soignés: "
+    ]
+  },
+  "STATS:SsserpentHead": {
+    "TEXT": [
+      "Or gagné: "
+    ]
+  },
+  "STATS:Golden Idol": {
+    "TEXT": [
+      "Or supplémentaire gagné: "
+    ]
+  },
+  "STATS:Bloody Idol": {
+    "TEXT": [
+      "PV soignés: "
+    ]
+  },
+  "STATS:FaceOfCleric": {
+    "TEXT": [
+      "PV Max gagnés: "
+    ]
+  },
+  "STATS:Black Star": {
+    "TEXT": [
+      "Reliques supplémentaires: "
+    ]
+  },
+  "STATS:Blood Vial": {
+    "TEXT": [
+      "PV soignés: "
+    ]
+  },
+  "STATS:Juzu Bracelet": {
+    "TEXT": [
+      "Combats évités: "
+    ]
+  },
+  "STATS:Ectoplasm": {
+    "TEXT": [
+      "Or perdu: "
+    ]
+  },
+  "STATS:Sozu": {
+    "TEXT": [
+      "Potions perdues: "
+    ]
+  },
+  "STATS:Boot": {
+    "TEXT": [
+      "Dégâts infligés: "
+    ]
+  },
+  "STATS:PreservedInsect": {
+    "TEXT": [
+      "PV retirés: "
+    ]
+  },
+  "STATS:Meat on the Bone": {
+    "TEXT": [
+      "PV soignés: "
+    ]
+  },
+  "STATS:Pantograph": {
+    "TEXT": [
+      "PV soignés: "
+    ]
+  },
+  "STATS:Torii": {
+    "TEXT": [
+      "Dégâts bloqués: "
+    ]
+  },
+  "STATS:TungstenRod": {
+    "TEXT": [
+      "Dégâts bloqués: "
+    ]
+  },
+  "STATS:Mercury Hourglass": {
+    "TEXT": [
+      "Dégâts infligés: "
+    ]
+  },
+  "STATS:StoneCalendar": {
+    "TEXT": [
+      "Dégâst infligés: "
+    ]
+  },
+  "STATS:Darkstone Periapt": {
+    "TEXT": [
+      "PV Max gagnés: "
+    ]
+  },
+  "STATS:Singing Bowl": {
+    "TEXT": [
+      "PV Max gagnés: "
+    ]
+  },
+  "STATS:Shuriken": {
+    "TEXT": [
+      "Force gagné: "
+    ]
+  },
+  "STATS:Kunai": {
+    "TEXT": [
+      "Dextérité gagné: "
+    ]
+  },
+  "STATS:Ornamental Fan": {
+    "TEXT": [
+      "Armure gagnée: "
+    ]
+  },
+  "STATS:Mark of the Bloom": {
+    "TEXT": [
+      "Soins bloqués: "
+    ]
+  },
+  "STATS:Art of War": {
+    "TEXT": [
+      "Énergie gagnée: "
+    ]
+  },
+  "STATS:Nunchaku": {
+    "TEXT": [
+      "Énergie gagnée: "
+    ]
+  },
+  "STATS:Snake Skull": {
+    "TEXT": [
+      "Poison appliqué: "
+    ]
+  },
+  "STATS:Letter Opener": {
+    "TEXT": [
+      "Dégâts infligés: "
+    ]
+  },
+  "STATS:Sundial": {
+    "TEXT": [
+      "Énergie gagnée: "
+    ]
+  },
+  "STATS:Charon's Ashes": {
+    "TEXT": [
+      "Dégâts infligés: "
+    ]
+  },
+  "STATS:CloakClasp": {
+    "TEXT": [
+      "Armure gagnée: "
+    ]
+  },
+  "STATS:Pocketwatch": {
+    "TEXT": [
+      "Cartes piochées: "
+    ]
+  },
+  "STATS:Tingsha": {
+    "TEXT": [
+      "Dégâts infligés: "
+    ]
+  },
+  "STATS:Tough Bandages": {
+    "TEXT": [
+      "Armure gagnée: "
+    ]
+  },
+  "STATS:VioletLotus": {
+    "TEXT": [
+      "Énergie gagnée: "
+    ]
+  },
+  "STATS:TheAbacus": {
+    "TEXT": [
+      "Armure gagnée: "
+    ]
+  },
+  "STATS:Dead Branch": {
+    "TEXT": [
+      "Cartes générées: "
+    ]
+  },
+  "STATS:Unceasing Top": {
+    "TEXT": [
+      "Cartes piochées: "
+    ]
+  },
+  "STATS:FrozenCore": {
+    "TEXT": [
+      "Orbes glaciaires canalisées: "
+    ]
+  },
+  "STATS:HoveringKite": {
+    "TEXT": [
+      "Énergie gagnée: "
+    ]
+  },
+  "STATS:Runic Cube": {
+    "TEXT": [
+      "Cartes piochées: "
+    ]
+  },
+  "STATS:Strange Spoon": {
+    "TEXT": [
+      "Cartes recyclées: "
+    ]
+  },
+  "STATS:Nloth's Gift": {
+    "TEXT": [
+      "Cartes rares supplémentaires: "
+    ]
+  },
+  "STATS:Self Forming Clay": {
+    "TEXT": [
+      "Armure gagnée: "
+    ]
+  },
+  "STATS:Necronomicon": {
+    "TEXT": [
+      "Attaques jouées deux fois: "
+    ]
+  },
+  "STATS:Medical Kit": {
+    "TEXT": [
+      "Cartes de statut épuisées: "
+    ]
+  },
+  "STATS:Blue Candle": {
+    "TEXT": [
+      "Malédictions épuisées: "
+    ]
+  },
+  "STATS:Orichalcum": {
+    "TEXT": [
+      "Armure gagnée: "
+    ]
+  },
+  "STATS:Pen Nib": {
+    "TEXT": [
+      "Attaquées doublées: "
+    ]
+  },
+  "STATS:Smiling Mask": {
+    "TEXT": [
+      "Or économisé: "
+    ]
+  },
+  "STATS:Gremlin Horn": {
+    "TEXT": [
+      "Cartes piochées: ",
+      " NL Énergie gagnée: ",
+      " NL Cartes par combat: ",
+      " NL Énergie par combat: "
+    ]
+  },
+  "STATS:InkBottle": {
+    "TEXT": [
+      "Cartes piochées: "
+    ]
+  },
+  "STATS:Bird Faced Urn": {
+    "TEXT": [
+      "PV soignés: "
+    ]
+  },
+  "STATS:Champion Belt": {
+    "TEXT": [
+      "Affaibli appliqué: "
+    ]
+  },
+  "STATS:Ginger": {
+    "TEXT": [
+      "Affaibli bloqué: "
+    ]
+  },
+  "STATS:Turnip": {
+    "TEXT": [
+      "Frêle bloqué: "
+    ]
+  },
+  "STATS:Prayer Wheel": {
+    "TEXT": [
+      "Choix de cartes supplémentaires: "
+    ]
+  },
+  "STATS:Inserter": {
+    "TEXT": [
+      "Slots d'orbes crées: "
+    ]
+  },
+  "STATS:HandDrill": {
+    "TEXT": [
+      "Vulnérable infligé: "
+    ]
+  },
+  "STATS:OrangePellets": {
+    "TEXT": [
+      "Débuffs dissipés: "
+    ]
+  },
+  "STATS:WarpedTongs": {
+    "TEXT": [
+      "Cartes améliorées: "
+    ]
+  },
+  "STATS:Shovel": {
+    "TEXT": [
+      "Reliques déterrées: "
+    ]
+  },
+  "STATS:Centennial Puzzle": {
+    "TEXT": [
+      "Cartes piochées: "
+    ]
+  },
+  "STATS:Happy Flower": {
+    "TEXT": [
+      "Énergie gagnée: "
+    ]
+  },
+  "STATS:Dream Catcher": {
+    "TEXT": [
+      "Choix de cartes supplémentaires: "
+    ]
+  },
+  "STATS:Peace Pipe": {
+    "TEXT": [
+      "Cartes retirées: "
+    ]
+  },
+  "STATS:Lizard Tail": {
+    "TEXT": [
+      "PV soignés: "
+    ]
+  },
+  "STATS:Question Card": {
+    "TEXT": [
+      "Options de cartes supplémentaires: "
+    ]
+  },
+  "STATS:Tiny Chest": {
+    "TEXT": [
+      "Coffres crées: "
+    ]
+  },
+  "STATS:Busted Crown": {
+    "TEXT": [
+      "Options de cartes perdues: "
+    ]
+  },
+  "STATS:Cursed Key": {
+    "TEXT": [
+      "Malédictions créées: "
+    ]
+  },
+  "STATS:Chemical X": {
+    "TEXT": [
+      "Cartes avec un coût de X jouées: "
+    ]
+  },
+  "STATS:Yang": {
+    "TEXT": [
+      "Dextérité Temporaire gagnée: "
+    ]
+  },
+  "STATS:Cables": {
+    "TEXT": [
+      "Orbes activées: ",
+      " NL Orbes kéraunique: ",
+      " NL Orbes glaciaire: ",
+      " NL Orbes obscure: ",
+      " NL Orbe plasmique: "
+    ]
+  },
+  "STATS:Emotion Chip": {
+    "TEXT": [
+      "Orbes activées: ",
+      " NL Orbes kéraunique: ",
+      " NL Orbes glaciaire: ",
+      " NL Orbes obscure: ",
+      " NL Orbe plasmique: "
+    ]
+  },
+  "STATS:Melange": {
+    "TEXT": [
+      "Cartes scrutées: "
+    ]
+  },
+  "STATS:GoldenEye": {
+    "TEXT": [
+      "Cartes scrutées supplémentaires: "
+    ]
+  },
+  "STATS:Regal Pillow": {
+    "TEXT": [
+      "PV soignés: "
+    ]
+  },
+  "STATS:Lee's Waffle": {
+    "TEXT": [
+      "PV soignés: "
+    ]
+  },
+  "STATS:Mummified Hand": {
+    "TEXT": [
+      "Énergie économisée: "
+    ]
+  },
+  "STATS:Magic Flower": {
+    "TEXT": [
+      "PV soignés: "
+    ]
+  },
+  "STATS:Bronze Scales": {
+    "TEXT": [
+      "Dégâts infligés: "
+    ]
+  },
+  "STATS:Pandora's Box": {
+    "TEXT": [
+      "Cartes obtenues: ",
+      "Inconnu"
+    ]
+  },
+  "STATS:Astrolabe": {
+    "TEXT": [
+      "Cartes obtenues: ",
+      "Inconnu"
+    ]
+  },
+  "STATS:Whetstone": {
+    "TEXT": [
+      "Cartes améliorées: ",
+      "Inconnu"
+    ]
+  },
+  "STATS:War Paint": {
+    "TEXT": [
+      "Cartes améliorées: ",
+      "Inconnu"
+    ]
+  },
+  "STATS:Bag of Preparation": {
+    "TEXT": [
+      "Cartes piochées: "
+    ]
+  },
+  "STATS:Gambling Chip": {
+    "TEXT": [
+      "Cartes piochées: "
+    ]
+  },
+  "STATS:Ring of the Snake": {
+    "TEXT": [
+      "Cartes piochées: "
+    ]
+  },
+  "STATS:Frozen Eye": {
+    "TEXT": [
+      "Temps passé à regarder la pioche: "
+    ]
+  },
+  "STATS:FossilizedHelix": {
+    "TEXT": [
+      "Dégâts bloqués: "
+    ]
+  },
+  "STATS:Ancient Tea Set": {
+    "TEXT": [
+      "Énergie gagnée: "
+    ]
+  },
+  "STATS:Membership Card": {
+    "TEXT": [
+      "Or économisé: ",
+      " NL (Cela inclu le Coursier et la Carte de membre)"
+    ]
+  },
+  "STATS:Girya": {
+    "TEXT": [
+      "Nombre d'entraînements: "
+    ]
+  },
+  "STATS:WingedGreaves": {
+    "TEXT": [
+      "Charges utilisées: "
+    ]
+  },
+  "STATS:Omamori": {
+    "TEXT": [
+      "Charges utilisées: "
+    ]
+  },
+  "STATS:Matryoshka": {
+    "TEXT": [
+      "Charges utilisées: "
+    ]
+  },
+  "STATS:Bottled Flame": {
+    "TEXT": [
+      "Carte embouteillée: ",
+      "Inconnu"
+    ]
+  },
+  "STATS:Bottled Tornado": {
+    "TEXT": [
+      "Carte embouteillée: ",
+      "Inconnu"
+    ]
+  },
+  "STATS:Bottled Lightning": {
+    "TEXT": [
+      "Carte embouteillée: ",
+      "Inconnu"
+    ]
+  },
+  "STATS:Nilry's Codex": {
+    "TEXT": [
+      "Cartes communes choisies: ",
+      " NL Cartes peu communes choisies: ",
+      " NL Cartes rares choisies: ",
+      " NL Cartes passées: "
+    ]
+  },
+  "STATS:Cauldron": {
+    "TEXT": [
+      "Potions récupérées: "
+    ]
+  },
+  "STATS:HolyWater": {
+    "TEXT": [
+      "Énergie gagnée: "
+    ]
+  },
+  "STATS:PureWater": {
+    "TEXT": [
+      "Énergie gagnée: "
+    ]
+  },
+  "STATS:White Beast Statue": {
+    "TEXT": [
+      "Potions supplémentaires attendues: "
+    ]
+  },
+  "STATS:Calipers": {
+    "TEXT": [
+      "Armure retenue: "
+    ]
+  },
+  "STATS:Ice Cream": {
+    "TEXT": [
+      "Énergie retenue: "
+    ]
+  },
+  "STATS:The Specimen": {
+    "TEXT": [
+      "Poison pertinent appliqué: "
+    ]
+  }
+}
