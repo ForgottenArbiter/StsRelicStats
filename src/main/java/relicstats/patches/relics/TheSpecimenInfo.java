@@ -83,6 +83,7 @@ public class TheSpecimenInfo extends CombatStatsInfo {
                         poisonAmount = poisonPower.amount;
                     }
                     int remainingHp = target.currentHealth - poisonAmount;
+                    remainingHp = Math.max(remainingHp, 0);
                     int relevantPoison = Math.min(remainingHp, _instance.amount);
                     getInstance().amount += relevantPoison;
                 }
