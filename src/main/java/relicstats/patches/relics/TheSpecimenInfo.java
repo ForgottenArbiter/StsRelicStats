@@ -76,14 +76,16 @@ public class TheSpecimenInfo extends CombatStatsInfo {
         public static void postfix(ApplyPowerToRandomEnemyAction _instance) {
             if (_instance == action) {
                 AbstractCreature target = _instance.target;
-                AbstractPower poisonPower = target.getPower(PoisonPower.POWER_ID);
-                int poisonAmount = 0;
-                if (poisonPower != null) {
-                    poisonAmount = poisonPower.amount;
+                if (target != null) {
+                    AbstractPower poisonPower = target.getPower(PoisonPower.POWER_ID);
+                    int poisonAmount = 0;
+                    if (poisonPower != null) {
+                        poisonAmount = poisonPower.amount;
+                    }
+                    int remainingHp = target.currentHealth - poisonAmount;
+                    int relevantPoison = Math.min(remainingHp, _instance.amount);
+                    getInstance().amount += relevantPoison;
                 }
-                int remainingHp = target.currentHealth - poisonAmount;
-                int relevantPoison = Math.min(remainingHp, _instance.amount);
-                getInstance().amount += relevantPoison;
             }
         }
 
