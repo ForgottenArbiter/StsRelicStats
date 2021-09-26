@@ -1,11 +1,13 @@
 package relicstats.patches.relics;
 
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.WhiteBeast;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import javassist.*;
@@ -22,6 +24,18 @@ public class WhiteBeastStatueInfo extends StatsInfo {
 
     private static String statId = getLocId(WhiteBeast.ID);
     private static String[] description = CardCrawlGame.languagePack.getUIString(statId).TEXT;
+
+    public static int relicCount(String relicId, boolean skipOnce) {
+        int count = 0;
+        for (AbstractRelic r : AbstractDungeon.player.relics) {
+            if (r.relicId.equals(relicId))
+                count++;
+        }
+        if (skipOnce && count > 0) {
+            count--;
+        }
+        return count;
+    }
 
     @Override
     public String getStatsDescription() {
@@ -65,6 +79,9 @@ public class WhiteBeastStatueInfo extends StatsInfo {
     }
 
     public static void captureCurrentChances() {
+        if (relicCount(WhiteBeast.ID, true) > 0) {
+            return;  // We already have White Beast statue
+        }
         int chance = 40;
         chance += AbstractRoom.blizzardPotionMod;
         int bucket = chance / 10;
@@ -93,6 +110,10 @@ public class WhiteBeastStatueInfo extends StatsInfo {
             expected += (0.1 * i) * chances[i];
         }
         potions += expected;
+        if (Loader.isModLoaded("chronoMods")) {
+            int extraCount = relicCount(WhiteBeast.ID, true);
+            potions += extraCount;  // Supporting Spire with Friends for once
+        }
     }
 
     @SpirePatch(
