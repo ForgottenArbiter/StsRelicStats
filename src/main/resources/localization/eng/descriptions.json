@@ -30,7 +30,8 @@
       " NL 1 energy: ",
       " NL 2 energy: ",
       " NL 3 energy: ",
-      " NL Average discount: "
+      " NL Average discount: ",
+      " NL Extra cards drawn: "
     ]
   },
   "STATS:CeramicFish": {
