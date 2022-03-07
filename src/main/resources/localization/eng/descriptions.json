@@ -619,5 +619,11 @@
     "TEXT": [
       "Relevant poison applied: "
     ]
+  },
+  "STATS:DollysMirror": {
+    "TEXT": [
+      "Card copied: ",
+      "Unknown"
+    ]
   }
 }
