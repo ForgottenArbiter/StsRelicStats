@@ -643,5 +643,11 @@
       "Poison applied: ",
       " NL Artifact removed: "
     ]
+  },
+  "STATS:Empty Cage": {
+    "TEXT": [
+      "Cards removed:",
+      "Unknown"
+    ]
   }
 }

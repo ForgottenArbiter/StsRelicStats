@@ -203,6 +203,7 @@ public class RelicStats implements RelicGetSubscriber, StartGameSubscriber, Post
         registerCustomStats(BagOfMarbles.ID, new BagOfMarblesInfo());
         registerCustomStats(RedMask.ID, new RedMaskInfo());
         registerCustomStats(TwistedFunnel.ID, new TwistedFunnelInfo());
+        registerCustomStats(EmptyCage.ID, new EmptyCageInfo());
 
         // Joke relic stats
         registerCustomStats(FrozenEye.ID, new FrozenEyeInfo());
